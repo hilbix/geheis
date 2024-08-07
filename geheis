@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Sorry!
+
+sed -e 's/ <a/<a/g' |	# fun hack
+gawk '
+BEGIN	{ RS="<" }
+/^p>[^\n]*[^\n] +$/	{ x=$0; gsub(/^.*[^ ]/,""); print length($0)-1 " " x }
+'
+
