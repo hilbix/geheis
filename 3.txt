@@ -1,0 +1,5683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html
+  lang="de"
+  data-responsive
+    data-consentmanagement
+>
+  
+  <!-- hf-2024-08-07T11:29:10 --><head>
+    <script>performance.mark('HEAD Anfang');</script>
+    
+
+    
+      
+      <script>
+        var config = JSON.parse(window.localStorage["akwaConfig-v2"] || '{}')
+        var scheme = config.colorScheme ? config.colorScheme.scheme : 'auto'
+        if (scheme === 'dark' || (scheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+        }
+      </script>
+
+    
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Heise-Forum als Command and Control Server:&hellip; | Forum - heise online</title>
+
+<link rel="dns-prefetch" href="//heise.cloudimg.io">
+<link rel="dns-prefetch" href="//cmp.heise.de">
+<link rel="dns-prefetch" href="//data-fb7f8b3ae8.heise.de">
+<link rel="dns-prefetch" href="//responder.wt.heise.de">
+<link rel="dns-prefetch" href="//prophet.heise.de">
+
+<link rel="preconnect" href="//heise.cloudimg.io">
+<link rel="preconnect" href="//cmp.heise.de">
+<link rel="preconnect" href="//data-fb7f8b3ae8.heise.de">
+<link rel="preconnect" href="//responder.wt.heise.de">
+<link rel="preconnect" href="//prophet.heise.de">
+
+<script>performance.mark('CSS-Crit Anfang');</script>
+  
+    <style
+          type="text/css"
+    >
+      a-img{box-sizing:border-box;display:block;overflow:hidden;width:100%}a-img *,a-img :after,a-img :before{box-sizing:inherit}a-img[box] img{height:100%;margin:auto;max-height:100%;width:auto}a-img img{height:auto;max-width:100%;width:100%}@supports not (aspect-ratio:1/1){a-img{height:0;padding-top:calc(var(--aspect-ratio-height, 9)/var(--aspect-ratio-width, 16)*100%);position:relative;will-change:padding}a-img img{left:0;position:absolute;top:0}}</style>
+<script>
+  performance.mark('CSS-Crit Ende');
+  performance.measure('CSS-Crit', 'CSS-Crit Anfang', 'CSS-Crit Ende');
+</script>
+  
+    <link
+          as="font"
+          crossorigin
+          href="/assets/styles/fonts/ss3vf.c70.ltc.woff2"
+          rel="preload"
+          type="font/woff2"
+    >
+  
+  
+    <link
+          as="image"
+          href="/icons/common-icons.svg"
+          rel="preload"
+    >
+  
+  
+  
+
+
+
+<script>performance.mark('JS-Inline Anfang');</script>
+
+<script>!function(e){var t={};function o(n){if(t[n])return t[n].exports;var i=t[n]={i:n,l:!1,exports:{}};return e[n].call(i.exports,i,i.exports,o),i.l=!0,i.exports}o.m=e,o.c=t,o.d=function(e,t,n){o.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:n})},o.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(t,"a",t),t},o.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},o.p="/assets/heise/",o(o.s=474)}({342:function(e,t,o){"use strict";(function(t){var o=function(){function e(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,o,n){return o&&e(t.prototype,o),n&&e(t,n),t}}();e.exports=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.desktopUserAgents=/(Macintosh|X11|Windows NT|iPad|Tablet|Nexus 10|KF.*Silk)/i}return o(e,[{key:"forceDesktop",value:function(){return 1===parseInt(this.store.mobile_detect_force_desktop)}},{key:"forceMobile",value:function(){return 1===parseInt(this.store.mobile_detect_force_mobile)}},{key:"isDesktop",value:function(){return!/Windows Phone 10/.test(this.userAgent)&&(this.portraitWidth>640||!(!this.desktopUserAgents.test(this.userAgent)||/(ZuneWP7|Mobile Safari)/.test(this.userAgent)))}},{key:"isMobile",value:function(){return!!/Windows Phone 10/.test(this.userAgent)||!(this.portraitWidth>640)&&(!!/(Android|Phone|Mobile|iPod|ZuneWP7|NokiaN97)/i.test(this.userAgent)||!this.desktopUserAgents.test(this.userAgent))}},{key:"persistForce",value:function(){var e=t.window.document.location;"mobile_detect_force_desktop"===e.hash.slice(1)?(this.store.mobile_detect_force_desktop=1,this.store.mobile_detect_force_mobile=0):"unset_mobile_detect_force_desktop"===e.hash.slice(1)&&(this.store.mobile_detect_force_desktop=0),"mobile_detect_force_mobile"===e.hash.slice(1)?(this.store.mobile_detect_force_mobile=1,this.store.mobile_detect_force_desktop=0):"unset_mobile_detect_force_mobile"===e.hash.slice(1)&&(this.store.mobile_detect_force_mobile=0)}},{key:"userAgent",get:function(){return t.window.navigator.userAgent}},{key:"width",get:function(){return t.window.screen.width}},{key:"height",get:function(){return t.window.screen.height}},{key:"portraitWidth",get:function(){return Math.min(this.width,this.height)}},{key:"store",get:function(){return t.window.localStorage}}]),e}()}).call(t,o(43))},43:function(e,t,o){"use strict";var n,i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};n=function(){return this}();try{n=n||Function("return this")()||(0,eval)("this")}catch(e){"object"===("undefined"==typeof window?"undefined":i(window))&&(n=window)}e.exports=n},474:function(e,t,o){"use strict";var n=function(e){return e&&e.__esModule?e:{default:e}}(o(475));document.documentElement.setAttribute("data-device",n.default)},475:function(e,t,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=new(function(e){return e&&e.__esModule?e:{default:e}}(o(342)).default),i="desktop",r=window.matchMedia("(max-width: 768px)").matches,s=document.querySelector("html[data-responsive]");(n.isMobile()||r&&s)&&(i="mobile"),t.default=i}});</script>
+
+
+  <script>performance.mark('JS-Kamel Anfang');</script>
+  
+
+<script id="kameleoon-js">
+  var ls = JSON.parse(window.localStorage.getItem('akwaConfig-v2'))
+  if (ls.consent && ls.consent[820]) {
+    (function(){var a=1000;window.kameleoonQueue=window.kameleoonQueue||[];window.kameleoonStartLoadTime=new Date().getTime();if(!document.getElementById("kameleoonLoadingStyleSheet")&&!window.kameleoonDisplayPageTimeOut){var b=document.getElementsByTagName("script")[0];var c="* { visibility: hidden !important; background-image: none !important; }";var d=document.createElement("style");d.type="text/css";d.id="kameleoonLoadingStyleSheet";if(d.styleSheet){d.styleSheet.cssText=c}else{d.appendChild(document.createTextNode(c))}b.parentNode.insertBefore(d,b);window.kameleoonDisplayPage=function(e){if(!e){window.kameleoonTimeout=true}if(d.parentNode){d.parentNode.removeChild(d)}};window.kameleoonDisplayPageTimeOut=window.setTimeout(window.kameleoonDisplayPage,a)};
+  window.kameleoonIframeURL="https://www.heise.de/kameleoon-iframe.html";var f=document.createElement("a");window.kameleoonLightIframe=false;f.href=window.kameleoonIframeURL;window.kameleoonIframeOrigin=f.origin||(f.protocol+"//"+f.hostname);if(location.href.indexOf(window.kameleoonIframeOrigin)!=0){window.kameleoonLightIframe=true;var g=function(event){if(window.kameleoonIframeOrigin==event.origin&&event.data.slice&&event.data.slice(0,9)=="Kameleoon"){window.removeEventListener("message",g);window.kameleoonExternalIFrameLoaded=true;if(window.Kameleoon){eval(event.data);Kameleoon.Analyst.load()}else{window.kameleoonExternalIFrameLoadedData=event.data}}};if(window.addEventListener){window.addEventListener("message",g,false)}var h=document.createElement("iframe");h.src=kameleoonIframeURL;h.id="kameleoonExternalIframe";h.style="float: left !important; opacity: 0.0 !important; width: 0px !important; height: 0px !important;";document.head.appendChild(h)};})();
+    var kameleoonScript = document.createElement('script');
+    kameleoonScript.async = true;
+    kameleoonScript.src = '//yxsu5ufd2m.kameleoon.eu/kameleoon.js';
+    document.getElementsByTagName('head')[0].appendChild(kameleoonScript);
+  }
+</script>
+
+  <script>
+    performance.mark('JS-Kamel Ende');
+    performance.measure('JS-Kamel', 'JS-Kamel Anfang', 'JS-Kamel Ende');
+  </script>
+
+<script>performance.mark('JS-Cmp Anfang');</script>
+
+  <script>function _typeof(t){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}!function(){for(var t,e,o=[],n=window,r=n;r;){try{if(r.frames.__tcfapiLocator){t=r;break}}catch(t){}if(r===n.top)break;r=n.parent}t||(function t(){var e=n.document,o=!!n.frames.__tcfapiLocator;if(!o)if(e.body){var r=e.createElement("iframe");r.style.cssText="display:none",r.name="__tcfapiLocator",e.body.appendChild(r)}else setTimeout(t,5);return!o}(),n.__tcfapi=function(){for(var t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];if(!n.length)return o;"setGdprApplies"===n[0]?n.length>3&&2===parseInt(n[1],10)&&"boolean"==typeof n[3]&&(e=n[3],"function"==typeof n[2]&&n[2]("set",!0)):"ping"===n[0]?"function"==typeof n[2]&&n[2]({gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"}):o.push(n)},n.addEventListener("message",(function(t){var e="string"==typeof t.data,o={};if(e)try{o=JSON.parse(t.data)}catch(t){}else o=t.data;var n="object"===_typeof(o)?o.__tcfapiCall:null;n&&window.__tcfapi(n.command,n.version,(function(o,r){var a={__tcfapiReturn:{returnValue:o,success:r,callId:n.callId}};t&&t.source&&t.source.postMessage&&t.source.postMessage(e?JSON.stringify(a):a,"*")}),n.parameter)}),!1))}();</script>
+
+  <script>
+    window._sp_queue = [];
+    window._sp_ = {
+      config: {
+        accountId: 1603,
+        baseEndpoint: 'https://cmp.heise.de',
+        propertyId: 14602,
+        gdpr: { },
+        events: {
+          onMessageChoiceSelect: function() {
+            console.log('[event] onMessageChoiceSelect', arguments);
+          },
+          onMessageReady: function() {
+            console.log('[event] onMessageReady', arguments);
+          },
+          onMessageChoiceError: function() {
+            console.log('[event] onMessageChoiceError', arguments);
+          },
+          onPrivacyManagerAction: function() {
+            console.log('[event] onPrivacyManagerAction', arguments);
+          },
+          onPMCancel: function() {
+            console.log('[event] onPMCancel', arguments);
+          },
+          onMessageReceiveData: function() {
+            console.log('[event] onMessageReceiveData', arguments);
+          },
+          onSPPMObjectReady: function() {
+            console.log('[event] onSPPMObjectReady', arguments);
+          },
+          onConsentReady: function (consentUUID, euconsent) {
+            console.log('[event] onConsentReady', arguments);
+          },
+          onError: function() {
+            console.log('[event] onError', arguments);
+          },
+        }
+      }
+    }
+  </script>
+  <script src='https://cmp.heise.de/unified/wrapperMessagingWithoutDetection.js' async></script>
+
+<script>
+  performance.mark('JS-Cmp Ende');
+  performance.measure('JS-Cmp', 'JS-Cmp Anfang', 'JS-Cmp Ende');
+</script>
+
+<script type="application/json" data-akwa-config>
+  {
+    "channel": "security",
+    "contentId": "3123",
+    "isHeisePlus": false,
+    "upscore": {
+      "recommendations": {
+        "config": {
+          "config": {
+            "reco_key": "FCD54E2B52",
+            "template_selector": {
+              "item_free": "#upscore-reco-template-free",
+              "item_premium": "#upscore-reco-template-premium",
+              "wrapper": "#upscore-reco-template-wrapper-article"
+            }
+          }
+        }
+      }
+    },
+    "clickPerformance": {
+      "keywords": [],
+      "pagetype": "Foren"
+      
+      ,
+      "language": "de"
+    }
+  }
+</script>
+<script>
+  performance.mark('JS-Inline Ende');
+  performance.measure('JS-Inline', 'JS-Inline Anfang', 'JS-Inline Ende');
+</script>
+  <script>performance.mark('JS-Forum Anfang');</script>
+  <script type="text/javascript" src="/js/jquery/jquery-1.7.1.min.js?.ltc.40d9e3357d98911bca6e"></script>
+  <script type="text/javascript" src="/js/plugins/jquery-ui-1.8.18_cycle.custom.min.js?.ltc.abdda534f9ed8232e5c1"></script>
+  <script type="text/javascript" src="/js/plugins/jquery_fieldselection.js?.ltc.6c24f8bc8dc200788d76"></script>
+  <script type="text/javascript" src="/js/forum/bb-code-buttons.js?.ltc.d8495123c4e44737aa15"></script>
+  <script>
+    performance.mark('JS-Forum Ende');
+    performance.measure('JS-Forum', 'JS-Forum Anfang', 'JS-Forum Ende');
+  </script>
+
+<script>performance.mark('CSS Anfang');</script>
+  
+    <link
+          href="/assets/akwa/v24/css/akwa.css?.ltc.6fa7e5c530389d8f4bbf"
+          media="print"
+          onload="this.media='all';this.onload='null'"
+          rel="stylesheet"
+          type="text/css"
+    >
+    <noscript>
+    <link
+          href="/assets/akwa/v24/css/akwa.css?.ltc.6fa7e5c530389d8f4bbf"
+          rel="stylesheet"
+          type="text/css"
+    >
+    </noscript>
+  
+    <noscript>
+    </noscript>
+  
+  
+  
+    <link
+          href="/assets/heise/ho/css/ho.css?.ltc.94e43ff890872c8c8412"
+          rel="stylesheet"
+          type="text/css"
+    >
+  
+<script>
+  performance.mark('CSS Ende');
+  performance.measure('CSS', 'CSS Anfang', 'CSS Ende');
+</script>
+
+<script>performance.mark('JS Anfang');</script>
+<script defer src="/assets/akwa/v24/js/akwa.js?.ltc.265054b168277af31195"></script>
+
+
+  
+  
+  
+    <script
+          defer
+          src="/assets/heise/ho/js/ho.js?.ltc.051d655b303f9e0ea5bd"
+    ></script>
+<script>
+  performance.mark('JS Ende');
+  performance.measure('JS', 'JS Anfang', 'JS Ende');
+</script>
+
+<script>performance.mark('Meta Anfang');</script>
+<link rel="author" title="Kontakt" href="mailto:kontakt%40heise.de?subject=heise%20online">
+<link rel="search" title="Suche" href="https://www.heise.de/suche/">
+  
+  
+    <link
+          href="/icons/ho/touch-icons/manifest.json"
+          rel="manifest"
+    >
+  
+    <link
+          color="#323232"
+          href="/icons/ho/touch-icons/safari-pinned-tab.svg"
+          rel="mask-icon"
+    >
+  
+    <link
+          href="/icons/ho/touch-icons/apple-touch-icon-180x180.png"
+          rel="apple-touch-icon"
+          sizes="180x180"
+    >
+  
+    <link
+          href="https://www.heise.de/rss/heise-atom.xml"
+          rel="alternate"
+          title="Aktuelle News von heise online"
+          type="application/atom+xml"
+    >
+  
+    <link
+          href="https://www.heise.de/rss/heise.rdf"
+          rel="alternate"
+          title="Aktuelle News von heise online (für ältere RSS-Reader)"
+          type="application/rss+xml"
+    >
+  
+    <link
+          href="/favicon.ico?v=JykvN0w9Yf"
+          rel="icon"
+    >
+  
+    <link
+          href="/icons/ho/favicon/favicon-32x32.png"
+          rel="icon"
+          sizes="32x32"
+          type="image/png"
+    >
+  
+    <link
+          href="/icons/ho/favicon/favicon-16x16.png"
+          rel="icon"
+          sizes="16x16"
+          type="image/png"
+    >
+  
+    <link
+          href="/icons/ho/favicon/favicon.svg"
+          rel="icon"
+          type="image/svg+xml"
+    >
+  <!--googleon: all-->
+  
+  <!--googleoff: all-->
+  
+    <meta
+          content="heise online"
+          name="application-name"
+    >
+  
+    <meta
+          content="heise online"
+          name="msapplication-tooltip"
+    >
+  
+    <meta
+          content="https://www.heise.de"
+          name="msapplication-starturl"
+    >
+  
+    <meta
+          content="#323232"
+          name="msapplication-TileColor"
+    >
+  
+    <meta
+          content="/icons/ho/touch-icons/mstile-144x144.png"
+          name="msapplication-TileImage"
+    >
+  
+    <meta
+          content="/icons/ho/touch-icons/browserconfig.xml"
+          name="msapplication-config"
+    >
+  
+    <meta
+          content="#ffffff"
+          name="theme-color"
+    >
+  
+    <meta
+          content="heise online"
+          name="DC.creator"
+    >
+  
+  
+  
+  
+    <meta
+          content="app-id=333214314"
+          name="apple-itunes-app"
+    >
+
+
+
+
+<meta name="publisher" content="Heise Medien">
+
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+
+
+
+<meta property="article:content_tier" content="free">
+
+
+<meta property="article:opinion" content="false">
+
+
+
+
+
+
+
+
+
+<meta name="format-detection" content="telephone=no">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="description" content="News und Foren zu Computer, IT, Wissenschaft, Medien und Politik. Preisvergleich von Hardware und Software sowie Downloads bei Heise Medien.">
+
+
+
+
+
+
+
+<meta property="fb:pages" content="333992367317">
+  <meta property="og:image" content="https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/icons/ho/opengraph/opengraph.png">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="heise online">
+  <meta property="og:title" content="heise online">
+  <meta property="og:type" content="website">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:image" content="https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/icons/ho/opengraph/opengraph.png">
+  <meta property="twitter:site" content="@heiseonline">
+  <meta property="twitter:title" content="heise online">
+
+
+
+
+
+<link rel="home" type="text/html" title="Startseite" href="/">
+<link rel="copyright" title="Copyright" href="/impressum.html">
+<meta name="generator" content="InterRed V23.2.15, http://www.interred.de/, InterRed GmbH" />
+
+<meta data-embetty-server="https://api.heise.de/svc/embetty">
+
+<link rel="me" href="https://social.heise.de/@heiseonline">
+
+<script>
+  performance.mark('Meta Ende');
+  performance.measure('Meta', 'Meta Anfang', 'Meta Ende');
+</script>
+  <script>performance.mark('App-Adds Anfang');</script>
+  <link rel="stylesheet" type="text/css" href="/stil/forum/forum2010.css?.ltc.6fe9417e3d9f6fe4bf20 "/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="/stil/forum/ie7.css?.ltc.2721fc3cc82e27262edd " />
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" href="/stil/forum/ie8.css?.ltc.ab37ddbeb219bcf6c55b " />
+<![endif]-->
+
+
+<link rel="stylesheet" type="text/css" href="/stil/heise-ui.css?.ltc.593e2ff3a97798084075 " />
+
+
+<meta name="robots" content="noindex">
+
+
+
+
+
+<script src="/js/plugins/heise.spin.min.js" type="text/javascript"></script>
+
+
+  <script>
+    performance.mark('App-Adds Ende');
+    performance.measure('App-Adds', 'App-Adds Anfang', 'App-Adds Ende');
+  </script>
+
+
+
+
+    
+
+    
+
+<style type="text/css">
+  
+  @media screen and (min-width: 768px) {
+    a-collapse .header__content {
+      height: auto !important;
+    }
+
+    a-menu:not([disabled]) [data-collapse-target]:not([is-open]) {
+      height: 0;
+      overflow: hidden;
+    }
+
+    
+    a-paternoster[media="(min-width: 320px) and (max-width: 767px)"] {
+      display: none;
+    }
+    
+    .perf-cls-reduc-leaderboard {
+      min-height: 250px;
+    }
+
+    .perf-cls-reduc-leaderboard:has(iframe[height="90"]) {
+      min-height: 90px;
+    }
+
+    @supports not selector(:has(a, b)) {
+      .perf-cls-reduc-leaderboard {
+        min-height: 90px;
+      }
+    }
+
+    .perf-cls-reduc-rectangle {
+      min-height: 350px;
+      margin-bottom: 3rem;
+    }
+  }
+
+  a-pur-indicator {
+    display: block;
+    border-top-width: 5px;
+    border-top-style: solid;
+  }
+
+  a-pur-indicator .close {
+    display: none;
+  }
+
+  a-pur-indicator:not([disabled]) [data-collapse-target]:not([is-open]) {
+    height: 0;
+  }
+
+  .a-login__link:link {
+    color: var(--akwa-link-color);
+    text-decoration: none;
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+
+  @media screen and (max-width: 767px) {
+    a-collapse:not([disabled]) [data-collapse-target]:not([is-open]) {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    a-paternoster[media="(min-width: 320px) and (max-width: 767px)"] {
+      display: block;
+      min-height: 306px;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .inread-cls-reduc:has(.ad) {
+    min-height: 230px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .incontent3-cls-reduc:has(.ad) {
+      min-height: 300px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .inread-cls-reduc:has(.ad) {
+      min-height: 350px;
+    }
+  }
+  
+
+  @media screen and (min-width: 992px) {
+    #wtma_teaser_ho_vertrieb_mini_1 {
+      min-height: 500px;
+    }
+  }
+
+  .legacy-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .article-image {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  a-paid-content-teaser {
+    display: none;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .perf-cls-reduc-leaderboard {
+      min-height: 254px;
+    }
+  }
+</style>
+
+    <script>
+      performance.mark('HEAD Ende');
+      performance.measure('HEAD', 'HEAD Anfang', 'HEAD Ende');
+    </script>
+  </head>
+  
+
+
+  <body
+    class="ho a-theme a-theme--ho"
+    data-mapp-branding="HEISE_ONLINE"
+      data-ad-unit="/6514/www.heise.de/newsticker/newsticker-general"
+  >
+    <script>performance.mark('BODY Anfang');</script>
+      <a-android-native-app-prompt></a-android-native-app-prompt>
+    
+
+    <a-analytics type="webtrekk">
+      <script type="application/json">
+        {"options":{},"vars":{"contentGroup":{"1":"www.heise.de","10":"forum","11":"it","12":"security","13":"free","16":"9826415","2":"security","3":"news","4":"mobile-device-management-einbrecher-bei-mobile-guardian-loeschen-tausende-geraete-9826415","5":"forum-thread","9":"forum-thread"},"contentId":"www.heise.de.security.news.mobile-device-management-einbrecher-bei-mobile-guardian-loeschen-tausende-geraete-9826415.forum-thread","customEcommerceParameter":{},"customParameter":{"1":"1\/1","10":"security;ho;ix;apple;newsticker","14":"free","15":"Dirk Knop","17":"undefiniert","22":"it","23":"it","25":"Einbrecher löschen tausende Geräte beim MDM-Anbieter Mobile Guardian","26":"v5","28":"security","29":"free","31":"120","4":"loeschen;security;mdm;cybercrime;mobile device management;einbrecher;mobile guardian","40":"0","46":"de","47":"de;en","48":"9826415","8":"2024-08-07T08:54:00"},"launchLiveaccount":"1","tiDomain":"responder.wt.heise.de","tiId":"288689636920174"}}
+      </script>
+    </a-analytics>
+  
+
+  <a-analytics type="infonline-base">
+    <script type="application/json">
+      {
+        "vars": {
+          "cp":"sec_n_forum",
+          "co":"%2Fforum%2Fheise-online%2FKommentare%2FEinbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian%2FZentralisierung-ist-sehr-praktisch%2Fposting-44291722%2Fshow%2F%3Furl%3D%252Fforum%252Fheise-online%252FKommentare%252FEinbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian%252FZentralisierung-ist-sehr-praktisch%252Fposting-44291722%252Fshow%252F",
+          "dg": true 
+        },
+        "options": {
+          "disableSurvey": false
+
+        }
+      }
+      </script>
+  </a-analytics>
+
+  
+    
+    
+
+
+
+  
+
+  <a-analytics type="upscore">
+    <script type="application/json">
+      {
+        "options": {
+          "enableRecommendations": false,
+          "enablePaywall": false
+        },
+        "vars": {
+          "config": {
+            "article": "",
+            "track_positions": true
+          },
+          "data": {
+          "section": "forum",
+
+
+          "object_id": "",
+          "pubdate": "",
+          "object_type": "misc",
+"content_type":0}
+        }
+      }
+    </script>
+  </a-analytics>
+
+
+  <a-click-performance></a-click-performance>
+
+<a-script
+  src="/js/ho/mbmedien-reporting.js"
+  needs-consent
+  name="Mbmedien"
+></a-script>
+
+                
+        
+    
+
+
+  
+      
+      <div
+  class="
+    topnavigation
+    
+
+    
+    
+  "
+>
+
+    
+    
+
+    <header
+    role="banner"
+    class="topnavigation__header">
+
+      <div class="topnavigation__content">
+        <div class="topnavigation__logo">
+
+          <a href="/"
+          title="heise online"
+          name="topnavi.ho.news"
+          data-google-interstitial=false
+          class="topnavigation__logo-link
+          topnavigation__item">
+            
+              
+
+
+
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1504 214"
+  role="img"
+  preserveAspectRatio="xMinYMin"
+  class="heise-online-logo topnavigation__heiseonline-logo"
+>
+  <style>
+    .heise-online-logo-svg-path-online {
+      fill: #6f7d93;
+    }
+    .heise-online-logo-svg-path-heise {
+      fill: #14315b;
+    }
+    .dark .heise-online-logo-svg-path-online,
+    .dark .heise-online-logo-svg-path-heise {
+      fill: #f2f2f2;
+    }
+  </style>
+  <title>heiseframe_title</title>
+  <path class="heise-online-logo-svg-path-online" d="M869.84 139.56c0-43.75 29.74-69 62.47-69s62.47 25.25 62.47 69-29.74 68.79-62.47 68.79-62.47-25.25-62.47-68.79m93.29 0c0-26.32-11.55-43.86-30.81-43.86s-30.81 17.54-30.81 43.86 11.55 43.65 30.81 43.65 30.81-17.33 30.81-43.65m49.9-65.79h25.25l2.35 17.76h.86c11.77-11.45 25.14-20.97 43.11-20.97 28.13 0 40.44 19.04 40.44 52.2v82.37h-30.81v-78.41c0-21.61-6.2-29.74-20.43-29.74-11.55 0-19.15 5.67-29.95 16.37v91.78h-30.81V73.77Zm135.54 97.56V16.22h30.81v156.72c0 7.6 3.42 10.27 6.63 10.27 1.39 0 2.46 0 4.81-.54l3.85 23c-3.74 1.5-8.88 2.67-16.26 2.67-21.82 0-29.85-14.12-29.85-37.01Zm52.93-138c0-10.38 8.13-17.44 19.04-17.44s19.04 7.06 19.04 17.44-8.13 17.44-19.04 17.44-19.04-7.27-19.04-17.44m3.53 40.44h30.81v131.37h-30.81zm54.66 0h25.25l2.35 17.76h.86c11.77-11.45 25.14-20.97 43.11-20.97 28.13 0 40.44 19.04 40.44 52.2v82.37h-30.81v-78.41c0-21.61-6.2-29.74-20.43-29.74-11.55 0-19.15 5.67-29.95 16.37v91.78h-30.81V73.77Zm129.52 65.79c0-42.68 29.63-69 60.55-69 35.52 0 54.24 25.67 54.24 62.37 0 5.88-.64 11.77-1.34 14.98h-83.39c2.57 23.32 17.54 36.59 38.73 36.59 11.23 0 20.86-3.53 30.49-9.52l10.48 19.15c-12.52 8.45-28.35 14.23-45.04 14.23-36.26 0-64.72-25.46-64.72-68.79Zm88.15-12.62c0-20.22-8.99-32.52-26.96-32.52-15.3 0-28.78 11.45-31.45 32.52z"/><path class="heise-online-logo-svg-path-heise" d="M258.47 15.22h30.81v48.89L288 89.46c11.02-10.38 24.07-19.9 42.04-19.9 28.13 0 40.44 19.04 40.44 52.2v82.37h-30.81v-78.41c0-21.61-6.2-29.74-20.43-29.74-11.55 0-19.15 5.67-29.95 16.37v91.78h-30.81V15.22Zm129.58 123.34c0-42.68 29.63-69 60.55-69 35.52 0 54.24 25.67 54.24 62.37 0 5.88-.64 11.77-1.34 14.98h-83.39c2.57 23.32 17.54 36.59 38.73 36.59 11.23 0 20.86-3.53 30.49-9.52l10.48 19.15c-12.52 8.45-28.35 14.23-45.04 14.23-36.26 0-64.72-25.46-64.72-68.79Zm88.14-12.62c0-20.22-8.99-32.52-26.96-32.52-15.3 0-28.78 11.45-31.45 32.52zm41.46-93.6c0-10.38 8.13-17.44 19.04-17.44s19.04 7.06 19.04 17.44-8.13 17.44-19.04 17.44-19.04-7.27-19.04-17.44m3.53 40.43h30.81v131.37h-30.81zm44.04 116.29 14.33-19.58c11.66 9.09 22.95 14.66 36.26 14.66 14.33 0 21.07-6.74 21.07-15.72 0-11.02-14.23-15.94-28.24-21.29-17.22-6.47-36.91-16.37-36.91-38.3s18.4-39.26 47.82-39.26c18.29 0 32.95 7.43 43.65 15.73l-14.12 18.93c-9.2-6.74-18.45-11.45-28.78-11.45-13.21 0-19.47 6.31-19.47 14.55 0 10.38 13.27 14.33 27.49 19.58 17.76 6.63 37.65 15.19 37.65 39.69 0 22.57-17.86 40.76-51.03 40.76-17.97 0-36.91-7.7-49.74-18.29Zm111.39-50.5c0-42.68 29.63-69 60.55-69 35.52 0 54.24 25.67 54.24 62.37 0 5.88-.64 11.77-1.34 14.98h-83.39c2.57 23.32 17.54 36.59 38.73 36.59 11.23 0 20.86-3.53 30.49-9.52l10.48 19.15c-12.52 8.45-28.35 14.23-45.04 14.23-36.26 0-64.72-25.46-64.72-68.79Zm88.15-12.62c0-20.22-8.99-32.52-26.96-32.52-15.3 0-28.78 11.45-31.45 32.52zM114.88 2.89c15.41 7.19 22.08 25.51 14.89 40.92l-71.06 152.4c-7.19 15.41-25.51 22.08-40.92 14.9C2.38 203.92-4.29 185.6 2.9 170.18L73.95 17.79C81.14 2.38 99.46-4.29 114.88 2.9m49.2 97.26c-15.41-7.18-33.73-.52-40.92 14.9l-25.7 55.12c-7.19 15.41-.52 33.74 14.89 40.93s33.73.52 40.92-14.89l25.71-55.12c7.19-15.42.52-33.74-14.9-40.93"/>
+</svg>
+
+
+            
+          </a>
+
+           
+
+    <a
+      href="/api/accountservice/subscribe/plus?affiliateId=32501_HP000028_21806_3_57&wt_mc=intern.abo.plus.hp_nk.navilink.desktop1.desktop1"
+      class="abo-link "
+      data-google-interstitial=false
+    >
+      <span class="abo-link">
+        heise+ gratis testen
+      </span>
+    </a>
+  
+
+
+        </div>
+
+        <div class="topnavigation__heise96">
+          <a href="https://www.heisegroup.de"
+            title="heise kennenlernen"
+            name="topnavi.ho.heise96"
+            class="topnavigation__heise96-logo-link topnavigation__item">
+              <img src="/icons/ho/heise96_light.svg" alt="heise kennenlernen" class="topnavigation__heise96-logo" />
+              <img src="/icons/ho/heise96_dark.svg" alt="heise kennenlernen" class="topnavigation__heise96-logo topnavigation__heise96-logo--dark" />
+          </a>
+        </div>
+
+        <div class="topnavigation__actions">
+            <section
+  class="
+    topnavigation-login
+    topnavigation__item
+    topnavigation__item
+  "
+>
+  <svg class="topnavigation-login__icon">
+    <use href="/icons/common-icons.svg#login"></use>
+  </svg>
+  <a-login
+    label=""
+    class="topnavigation-login__link"
+  >
+    <a href="/sso/login/" class="a-login__link a-login__link--sso" rel="nofollow">Anmelden</a>
+  </a-login>
+</section>
+
+            <form
+  accept-charset="utf-8"
+  method="get"
+  action="/suche/"
+  class="topnavigation-search"
+  role="search"
+  id="heisetopnavi_search"
+>
+  <fieldset class="topnavigation-search__container">
+    <input
+      type="text"
+      class="topnavigation-search__input"
+      value=""
+      name="q"
+      placeholder="Suchen"
+      data-autocomplete="true"
+      autocomplete="on"
+      spellcheck="false"
+      data-searchpath="/suche/"
+      role="textbox"
+      aria-autocomplete="list"
+      aria-label="Suchen"
+    >
+    <input
+      type="hidden"
+      name="sort_by"
+      value="date"
+    >
+    <button
+      class="topnavigation-search__button"
+      type="submit"
+      aria-label="suchen"
+    >
+      <svg class="topnavigation-search__search-icon">
+        <use href="/icons/common-icons.svg#search"></use>
+      </svg>
+    </button>
+    <input
+      type="hidden"
+      class="search_hidden"
+      value="search"
+      name="rm"
+    >
+  </fieldset>
+</form>
+
+
+          <a
+            href="#topnavigation__sub"
+            class="
+              topnavigation-menu
+              js-topnavigation-menu
+              topnavigation-menu
+            "
+            aria-controls="topnavigation__sub"
+          >
+            <svg class="topnavigation-menu__icon js-topnavigation-menu__icon">
+              <use href="/icons/common-icons.svg#menu"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div
+        id="topnavigation__sub"
+        class="topnavigation__sub js-topnavigation__sub"
+      >
+
+        
+
+
+
+
+
+
+<div class="magazine-nav a-u-mb-3">
+  <ul class="magazine-nav__items a-u-remove-list-style">
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--ct
+          a-theme
+          a-theme--ct
+        "
+      >
+        
+        
+        <a
+          href="/ct/"
+          title="c't – Magazin für Computertechnik"
+          name="topnavi.ho.magazine-nav.ct"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--ct"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 370"
+  class="ct-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M329,0H429.54L406.65,93.08H500L477.72,183.7H384.29l-10.5,42.73s-3.22,10.79-2.08,17.61a26.5,26.5,0,0,0,5.07,12.62c3.63,5.13,6.81,7.56,12.56,10.09,5.46,2.39,15.07,2.51,15.07,2.51h73L452.6,370h-76c-66.62.67-108.38-45.12-108.38-101.55,0-12.32,3.53-32,11-66.06L284,183,329,0ZM231.46,0,211.65,80.56h42.5L228.78,183.7h43L317,0Zm-57.8,93.08C75.55,92.93,0,188.15,0,268.08,0,324.52,41.32,371.47,108.08,370H211.86l24.76-100.71H130.27c-21.92-.12-28.59-22.21-28.59-35.61,0-23.49,26.37-49.88,51.77-49.95H216.8l22.28-90.62Z" fill="#2288c6"/>
+
+</svg>
+
+
+
+
+          <span class="magazine-nav__title">
+            c't – Magazin für Computertechnik
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--ix
+          a-theme
+          a-theme--ix
+        "
+      >
+        
+        
+        <a
+          href="/ix/"
+          title="iX – Magazin für professionelle Informationstechnik"
+          name="topnavi.ho.magazine-nav.ix"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--ix"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 600 610"
+  class="ix-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M238.41,610h-139L346.17,248.34,294.41,69.72H421.75l12.81,45.67,31.26-45.67H600L475.16,252.6l70.42,242.66H418.23L387.41,385.48Zm-100-20.61h89.17L395.36,337.6l38.47,137h84.33L452.68,249,561,90.34H476.67l-50,73.08-20.5-73.08H321.82l46.83,161.6Zm-2.07-95.46H0L186.69,220.48H323ZM39,473.31h86.47L284,241.1h-86.4ZM260.28,183.12A91.56,91.56,0,1,1,323,25l2,1.89L306.87,46.13l-2-1.88a65,65,0,1,0-21.15,108l2.56-1L295.83,176l-2.56,1A91,91,0,0,1,260.28,183.12Z" fill="#4c5c64"/>
+</svg>
+
+
+
+          <span class="magazine-nav__title">
+            iX – Magazin für professionelle Informationstechnik
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--foto
+          a-theme
+          a-theme--foto
+        "
+      >
+        
+        
+        <a
+          href="/foto/"
+          title="c't Fotografie - Das Magazin rund ums digitale Bild"
+          name="topnavi.ho.magazine-nav.foto"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--foto"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 203 39.2"
+  class="foto-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M58.3,7.5l-1.5,5.1h6.8l-2,6.7H54.9L51.4,31.2H45.2L54.1.8H67.8l-2,6.7ZM80.1,22.4c-1.8,6-6.7,9.4-11.1,9.4s-7.4-3.4-5.6-9.4S69.9,13,74.4,13,81.8,16.4,80.1,22.4Zm-11.6,0c-.7,2.2,0,4,2,4s3.7-1.7,4.3-4,0-4-2-4S69.1,20.2,68.5,22.4Zm17.6,8.8H81.2l3.7-12.5H83.2l1.5-5.2h1.6l1.6-5.3h4.9l-1.6,5.3h2.8l-1.5,5.2H89.8Zm24.4-8.8c-1.8,6-6.7,9.4-11.1,9.4s-7.4-3.4-5.6-9.4,6.7-9.4,11.2-9.4S112.3,16.4,110.6,22.4ZM99,22.4c-.7,2.2,0,4,2,4s3.7-1.7,4.3-4,0-4-2-4S99.6,20.2,99,22.4Zm28.6,7.1c-2.2,7.5-6,10.5-11.2,10.5-3.2,0-6.9-2.1-6-6.7H116a1.5,1.5,0,0,0,.5,1.3,2.1,2.1,0,0,0,1.3.4c2.7,0,3.8-2.2,4.7-5.1l.2-.8c-1.8,1.6-3.3,2.4-5.1,2.4-4.1,0-5.7-3.9-4.2-9s5.7-9.6,9.9-9.6a3.2,3.2,0,0,1,3.4,2.4h.1l.5-1.9h4.9Zm-9-7.2c-.7,2.2,0,4,2,4s3.7-1.7,4.3-4,0-4-2-4S119.2,20.1,118.6,22.3Zm22-5.8h.1a6.7,6.7,0,0,1,5.4-3.1h1l-1.8,6a2.7,2.7,0,0,0-1.9-.6c-2.7,0-4.1,2.3-5,5.3l-2.1,7.1h-4.9l5.2-17.6h4.9Zm19.1,14.8h-4.9l.6-2h-.1a6.5,6.5,0,0,1-5,2.5c-4.1,0-5.8-4.4-4.3-9.4s5.6-9.4,9.7-9.4a3.7,3.7,0,0,1,3.6,2.3l.5-1.7h4.9Zm-8.6-8.8c-.7,2.2,0,4,2,4s3.7-1.7,4.3-4,0-4-2-4S151.7,20.2,151.1,22.4Zm18.4,8.8h-4.9l3.7-12.5h-1.7l1.5-5.2h1.7l.7-2.2c.7-2.4,1.3-4.2,3.2-6.2a8.2,8.2,0,0,1,5.7-2.8,2.9,2.9,0,0,1,1.9.6l-1.6,5.4a2.7,2.7,0,0,0-1.6-.6c-1.3,0-2,1-2.6,3l-.8,2.9h3.5l-1.5,5.2h-3.5Zm11.6,0h-4.9l5.2-17.6h4.9Zm7.5-24.4c-.6,1.9-2.3,3.5-3.8,3.5s-2.3-1.6-1.7-3.5,2.3-3.5,3.8-3.5S189.1,4.9,188.6,6.8Zm13.6,16.6H191.7c-.7,2.5-.1,3.9,1.9,3.9a3.4,3.4,0,0,0,2.8-1.6h4.8a10.1,10.1,0,0,1-8.9,6.1c-4.6,0-7.1-3.3-5.3-9.4S193,13,197.6,13s6.5,3.8,4.8,9.8Zm-3.5-3.6c.2-1.7-.7-2.8-2-2.8a4.3,4.3,0,0,0-3.8,2.8Z" transform="translate(0 -0.8)" fill="#fc0"/>
+  <path d="M34.4,8.4l1.7-6.8L35.3.8,33.4,8.4Zm2.7,22.7H30.9a9.1,9.1,0,0,1-6.1-2.1A8.8,8.8,0,0,0,31.7,32H38l2-8.3-.8-.8ZM41,8.4l-1.8,7.4H31.5l-.9,3.5a4.1,4.1,0,0,0-.2,1.4,2.2,2.2,0,0,0,.4,1,2.1,2.1,0,0,0,.7.7,2.2,2.2,0,0,1-.3-.9,4.1,4.1,0,0,1,.2-1.4l.9-3.5H40l1.8-7.4Zm-20.2-1H17.4l.8.8h2.5ZM26,.8,22.3,15.9H18.8l.8.8h3.5L26.8,1.6ZM12.6,15.9a3.8,3.8,0,0,0-1.8.5,5.2,5.2,0,0,0-1.5,1.3,4.2,4.2,0,0,0-.8,1.7A3.4,3.4,0,0,0,8.5,21a2.7,2.7,0,0,0,1,1.5h.2a3.4,3.4,0,0,1-.4-1A3.3,3.3,0,0,1,9.7,19,5.2,5.2,0,0,1,11,17.6a4.5,4.5,0,0,1,1.7-.8h5.9l1.8-7.4-.8-.8-1.8,7.4Zm4.8,15.3H9.1a9.7,9.7,0,0,1-3.7-.5,8.2,8.2,0,0,1-2.1-1.1l-.4-.4.4.4.4.4.9.7A7.1,7.1,0,0,0,8.9,32h9.3l2.1-8.3-.8-.8Z" transform="translate(0 -0.8)" fill="#bbbcbe"/>
+  <path d="M19,.8,17.4,7.4h3.5l-2.1,8.5h3.5L26,.8Zm8,0L22.9,17.4a30.2,30.2,0,0,0-.9,5.4c0,4.6,3.4,8.4,8.9,8.3h6.2l2-8.3h-6a4,4,0,0,1-1.2-.2,2.4,2.4,0,0,1-1.4-1.9,4.1,4.1,0,0,1,.2-1.4l.9-3.5h7.7L41,8.4H33.4L35.3.8ZM14.3,8.4C6.2,8.4,0,16.2,0,22.8c0,4.6,3.4,8.5,8.9,8.4h8.5l2-8.3H10.7c-1.8,0-2.3-1.8-2.3-2.9a4.6,4.6,0,0,1,4.2-4.1h5.2l1.8-7.4Z" transform="translate(0 -0.8)" fill="#87888a"/>
+</svg>
+
+
+
+
+          <span class="magazine-nav__title">
+            c't Fotografie - Das Magazin rund ums digitale Bild
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--macandi
+          a-theme
+          a-theme--macandi
+        "
+      >
+        
+        
+        <a
+          href="/mac-and-i/"
+          title="Mac &amp; i – Nachrichten, Tests, Tipps und Meinungen rund um Apple"
+          name="topnavi.ho.magazine-nav.macandi"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--macandi"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 600 145"
+  class="mac-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M115.67,142.81l8.41-57c2.33-15.42,4.66-29.45,7.1-42.59-6.78,15.58-13.49,30.1-19.25,41.61L84,140.61H59.55l-4.9-55.72c-.89-11-1.75-25.1-2.56-42q-1,4.95-2.07,9.94c-2.56,12.32-5,24-7.2,33.5L29.2,142.81H0L34.41,5.59H75.26l4.3,52.33c.2,3.22.44,6.59.69,10.1.62,8.54,1.3,18,1.59,27.5C87.05,81.44,93.6,67.27,98.27,57.44L123.59,5.59h41.35L146.41,142.81Zm115.07-16c-.07,1.09-.15,2.18-.22,3.25-.28,4-.55,7.77-.67,11.29l0,1.43H259l-.05-1.43c-.41-12.63,1.74-31.88,4-43.57l10.41-52.29-1.18-.37a115.86,115.86,0,0,0-32.73-4.86c-48.93,0-71.21,36-71.21,69.41,0,21.12,12.42,35.3,30.91,35.3C211.76,145,222.84,138.59,230.74,126.84Zm7-61.49L233.67,86.5c-4.61,24.06-14.94,32.59-22.38,32.59-9,0-10.39-9.25-10.39-14.77,0-18.27,13.43-39.51,30.74-39.51A38.56,38.56,0,0,1,237.79,65.35Zm115,74.12.79-.38-.23-24.64-1.88.75a47.9,47.9,0,0,1-18.83,3.89c-8.59,0-17.77-4.93-17.77-18.77C314.85,78,331.2,66,346.58,66a31.81,31.81,0,0,1,12.64,2.28l1.38.58L368.66,44l-1.26-.46A61.37,61.37,0,0,0,347,40.29c-37.07,0-65,27.19-65,63.23,0,25.08,16.67,41.28,42.48,41.28C335.29,144.8,345.88,142.81,352.77,139.47Zm222.05,3.34L593.9,42.49H562.36L543.28,142.81Zm6.84-109.72c10.62,0,18.34-7.38,18.34-17.54,0-9.3-6.41-15.55-16-15.55a17.65,17.65,0,0,0-17.94,17.74c0,9,6.23,15.35,15.15,15.35ZM510,140.52l2,2.29H474.44l-.41-.44a72.72,72.72,0,0,1-5.6-7l-.86-1.17c-10.26,7.29-22,10.83-35.81,10.83-26.17,0-43.07-14.48-43.07-36.89,0-17.69,10.88-31.92,32.36-42.3-4.79-8.23-7-15.42-7-22.53C414,20.16,432.3,3.39,457.5,3.39,478.73,3.39,493,16,493,34.7c0,15.14-10.48,27.18-33,37.82,5,7.75,11.49,16.76,16.31,23.38A88.38,88.38,0,0,0,489,74.78h29.56c-7.19,17.43-15.84,30.6-27.31,41.69A293,293,0,0,0,510,140.52Zm-55.62-25C447,105.82,438.81,94.22,432.2,84c-5.22,4-11.42,10.16-11.42,19.14,0,10.67,7.52,17.57,19.16,17.57A22,22,0,0,0,454.4,115.49ZM464.69,34.9c0-2.39-.71-10.19-9.79-10.19-6.94,0-12.38,6.84-12.38,15.57a25.7,25.7,0,0,0,5,15C455.61,51.41,464.69,44.82,464.69,34.9Z" fill="#2a2521"/>
+</svg>
+
+
+
+
+          <span class="magazine-nav__title">
+            Mac &amp; i – Nachrichten, Tests, Tipps und Meinungen rund um Apple
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--make
+          a-theme
+          a-theme--make
+        "
+      >
+        
+        
+        <a
+          href="/make/"
+          title="Make – Kreativ mit Technik"
+          name="topnavi.ho.magazine-nav.make"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--make"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 600 178"
+  class="make-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M559.08,49.1H600V85.87H559.08Zm0,89.6H600v36.77H559.08ZM430,112.34c0-49.1,37.39-66,63.39-66s58,13,58,70.41v5.76H467.76c1.92,20.91,13.51,28.89,29.33,28.89,14.92,0,28.83-7.37,37.4-15.15L549.2,159c-14.71,12.52-32.86,19-54.93,19C461.41,178,430,161.13,430,112.34ZM517.15,100c-1.91-17.78-9.88-26.26-24.19-26.26-11.89,0-22,7.77-24.79,26.26ZM319.3,0h38.1V96.17L396.71,49h40.92L396.41,96.17,440,175.37H400.74l-27.92-51.52L357.4,141.13v34.14H319.3V0ZM188.68,143.15c0-29.2,24.59-45.26,79.92-49.81V90.21c0-9.29-4.73-15.15-17-15.15-16,0-29.73,6.57-41.42,15.66l-16-21.82c12.5-11.32,31.45-22.53,62.89-22.53,34.47,0,48.79,17.07,48.79,49.5v48.69c0,15.16,1,24.45,3.52,30.81H271.43a61.15,61.15,0,0,1-2.83-18.48c-11.59,13-25.29,20.4-44,20.4C205.31,177.19,188.68,164.67,188.68,143.15Zm79.92-5.56V114.26c-30,3.13-42.83,10.7-42.83,22.22,0,8.08,5.74,12.12,13.91,12.12C253.08,148.6,262.25,144.06,268.6,137.59ZM0,0H50.8l39,129h.41L126.69,0h52V175.47H141.61V55.66h-.4c-2.62,15.16-6,26.27-9.68,39.1l-26.2,80.61H71.16l-26-80.61A322.28,322.28,0,0,1,35,53.74h-.4V175.37H0V0Z" fill="#e2001a"/>
+</svg>
+
+
+
+          <span class="magazine-nav__title">
+            Make – Kreativ mit Technik
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--select
+          a-theme
+          a-theme--select
+        "
+      >
+        
+        
+        <a
+          href="/select/"
+          title="Alle Magazine im Browser lesen"
+          name="topnavi.ho.magazine-nav.select"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--select"
+        >
+
+
+
+          
+
+
+
+
+
+          <span class="magazine-nav__title">
+            Alle Magazine im Browser lesen
+          </span>
+
+
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+        
+<nav class="sitemap topnavigation__sitemap" aria-label="Sitemap">
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        
+      "
+      data-collapse-trigger
+    >
+      IT News
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--newsticker">
+            
+            
+            <a
+              href="/newsticker"
+              title="heise online - Newsticker"
+              name="topnavi.ho.sitemap.newsticker"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Newsticker
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Hintergründe">
+            
+            
+            <a
+              href="/hintergrund"
+              title="heise online - Hintergründe"
+              name="topnavi.ho.sitemap.Hintergründe"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Hintergründe
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Ratgeber">
+            
+            
+            <a
+              href="/ratgeber"
+              title="heise online - Ratgeber"
+              name="topnavi.ho.sitemap.Ratgeber"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Ratgeber
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Tests">
+            
+            
+            <a
+              href="/tests"
+              title="heise online - Testberichte"
+              name="topnavi.ho.sitemap.Tests"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Tests
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Meinung">
+            
+            
+            <a
+              href="/meinung"
+              title="heise online - Meinungen"
+              name="topnavi.ho.sitemap.Meinung"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Meinungen
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        
+      "
+      data-collapse-trigger
+    >
+      Online-Magazine
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--heiseplus">
+            
+            
+            <a
+              href="/plus/"
+              title="heise+ - Immer mehr Wissen."
+              name="topnavi.ho.sitemap.heiseplus"
+              data-google-interstitial=false
+              class="sitemap-group__link sitemap-group__link--heiseplus"
+            >
+              heise<span class="sitemap_group__heiseplus-icon">+</span>
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tp">
+            
+            
+            <a
+              href="/tp/"
+              title="Telepolis"
+              name="topnavi.ho.sitemap.tp"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Telepolis
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--autos">
+            
+            
+            <a
+              href="/autos/"
+              title="heise Autos – News, Tests, Technik, Service rund ums Auto"
+              name="topnavi.ho.sitemap.autos"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Autos
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--techstage">
+            
+            
+            <a
+              href="https://www.techstage.de/"
+              title="TechStage – News, Tests &amp; Praxis zu Smartphones und Tablets mit Android, iOS, Windows Phone &amp; Co."
+              name="topnavi.ho.sitemap.techstage"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              TechStage
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tipps-tricks">
+            
+            
+            <a
+              href="/tipps-tricks/"
+              title="tipps+tricks"
+              name="topnavi.ho.sitemap.tipps-tricks"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              tipps+tricks
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse
+  class="sitemap-group sitemap-group--2-col"
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        
+      "
+      data-collapse-trigger
+    >
+      Services
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--Shop">
+            
+            
+            <a
+              href="https://shop.heise.de/"
+              title="heise Shop – IT Fachzeitschriften, Bücher, CD/DVD/Blu-ray"
+              name="topnavi.ho.sitemap.Shop"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Shop
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Arbeiten bei Heise">
+            
+            
+            <a
+              href="https://jobs.heise.de/"
+              title="heise jobs – Jobbörse für qualifizierte Fach- und Führungskräfte aus der IT-Branche"
+              name="topnavi.ho.sitemap.Arbeiten bei Heise"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Stellenmarkt
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise academy">
+            
+            
+            <a
+              href="https://heise-academy.de/"
+              title="heise academy - Weiterbildung für IT-Profis von heise medien"
+              name="topnavi.ho.sitemap.heise academy"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise academy
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--download">
+            
+            
+            <a
+              href="/download/"
+              title="heise Download – Software zum Download für Windows, Mac, Linux, iPhone, Symbian, Android"
+              name="topnavi.ho.sitemap.download"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Download
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise preisvergleich">
+            
+            
+            <a
+              href="https://preisvergleich.heise.de"
+              title="heise preisvergleich – Günstige Preise, Meinungen und Bewertungen zu vielen Produkten"
+              name="topnavi.ho.sitemap.heise preisvergleich"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise preisvergleich
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Tarifrechner">
+            
+            
+            <a
+              href="https://www.heise.de/tarifrechner"
+              title="Tarifrechner"
+              name="topnavi.ho.sitemap.Tarifrechner"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Tarifrechner
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise compaliate">
+            
+            
+            <a
+              href="https://compaliate.heise.de/"
+              title="heise compaliate – Entdecke die heise Affiliate Plattform"
+              name="topnavi.ho.sitemap.heise compaliate"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise compaliate
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Abo bestellen">
+            
+            
+            <a
+              href="https://shop.heise.de/zeitschriften-abo/"
+              title="Abo – c't, iX, c't Fotografie, Mac &amp; i, Make"
+              name="topnavi.ho.sitemap.Abo bestellen"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Abo bestellen
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Mein Abo">
+            
+            
+            <a
+              href="https://www.heise.de/sso/registration/add_subscriber_id?forward=https%3A%2F%2Fwww.heise.de%2F"
+              title="Abo verwalten - Mein persönlicher Abo-Bereich"
+              name="topnavi.ho.sitemap.Mein Abo"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Mein Abo
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Netzwerktools">
+            
+            
+            <a
+              href="https://www.heise.de/tools/"
+              title="heise online - Netzwerktools"
+              name="topnavi.ho.sitemap.Netzwerktools"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Netzwerktools
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--iMonitor">
+            
+            
+            <a
+              href="https://www.heise.de/netze/netzwerk-tools/imonitor-internet-stoerungen/"
+              title="heise iMonitor"
+              name="topnavi.ho.sitemap.iMonitor"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              iMonitor
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--loseblattwerke">
+            
+            
+            <a
+              href="/loseblattwerke/"
+              title="Loseblattwerke"
+              name="topnavi.ho.sitemap.loseblattwerke"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Loseblattwerke
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--spiele">
+            
+            
+            <a
+              href="https://spiele.heise.de"
+              title="heise Spiele"
+              name="topnavi.ho.sitemap.spiele"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Spiele
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        
+      "
+      data-collapse-trigger
+    >
+      Über Uns
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--heise medien">
+            
+            
+            <a
+              href="https://www.heisegroup.de/artikel/heise-medien-3904998.html"
+              title="heise medien - Hochwertiger und unabhängiger Journalismus"
+              name="topnavi.ho.sitemap.heise medien"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise medien
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise regioconcept">
+            
+            
+            <a
+              href="https://www.heise-regioconcept.de/"
+              title="heise regioconcept - Regionales Marketing für Unternehmen"
+              name="topnavi.ho.sitemap.heise regioconcept"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise regioconcept
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise Business Services">
+            
+            
+            <a
+              href="https://business-services.heise.de/"
+              title="heise Business Services – Produkte und Lösungen namhafter IT-Hersteller"
+              name="topnavi.ho.sitemap.heise Business Services"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Business Services
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--mediadaten">
+            
+            
+            <a
+              href="https://mediadaten.heise.de/"
+              title="Mediadaten heise medien"
+              name="topnavi.ho.sitemap.mediadaten"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Mediadaten
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Karriere">
+            
+            
+            <a
+              href="https://www.heisegroup.de/artikel/heise-als-Arbeitgeber-1812545.html"
+              title="Arbeiten bei heise – Heise als Arbeitgeber"
+              name="topnavi.ho.sitemap.Karriere"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Karriere
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--presse">
+            
+            
+            <a
+              href="https://www.heisegroup.de/presse/"
+              title="Pressemitteilungen und Interviews"
+              name="topnavi.ho.sitemap.presse"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Presse
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+</nav>
+
+
+        <div class="topnavigation__footer">
+          
+
+          
+
+
+
+<div
+  class="
+    notification-links
+    
+  "
+>
+  
+
+<a
+  
+  href="/newsletter/"
+  class="
+    link
+    notification-links__link
+  "
+  name="topnavi.ho.sitemap.newsletter"
+  data-google-interstitial=false
+>
+      
+
+
+<svg
+  class="link__svg"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMinYMin"
+  viewBox="0 0 24 24">
+  <path id="paper-plane-outline" d="M24,3,0,10l7.92,4.4L8,20l3.78-3.46L18,20ZM17,17.34l-5.48-3L20.85,6.4ZM20.46,5.9,9.6,13.25,4.66,10.51Z" transform="translate(0)"/>
+</svg>
+
+
+
+    
+      <span
+      >
+        Newsletter
+      </span>
+</a>
+
+
+  
+
+<a
+  
+  href="/benachrichtigungen/heise-bot/"
+  class="
+    link
+    notification-links__link
+  "
+  name="topnavi.ho.sitemap.heisebotti"
+  data-google-interstitial=false
+>
+      
+
+
+
+
+<svg
+  id="logo-botti"
+  xmlns="http://www.w3.org/2000/svg"
+  class="link__svg"
+  viewBox="0 0 24 24"
+>
+  <title>heiseframe_title</title>
+  <path d="M9.3,17.66c-.24.56-.62,1.21-1.32,1.21A.89.89,0,0,1,7.05,18a3,3,0,0,1,.36-1.14l3.18-7.26c.24-.55.55-.95,1.18-.95a.86.86,0,0,1,.89.89A3.36,3.36,0,0,1,12.25,11Zm2.76,1.21c.71,0,1.08-.63,1.34-1.2L14.58,15A3.74,3.74,0,0,0,15,13.59a.86.86,0,0,0-.89-.89c-.64,0-.94.43-1.19,1l-1.42,3.2A2.65,2.65,0,0,0,11.16,18,.86.86,0,0,0,12.06,18.87ZM23.64,8.3a1,1,0,0,0-1.53,1.08A9.42,9.42,0,0,1,19,10.68c-.52-4.49-4.34-7.14-8.87-7.14A10.33,10.33,0,0,0,4.4,5.22,11.49,11.49,0,0,1,2.09,1.78,1,1,0,0,0,2.51.91,1,1,0,0,0,.56,1a1,1,0,0,0,1,.91,15.71,15.71,0,0,1,1,4.84,10.36,10.36,0,0,0-2.58,7c0,5.77,4.64,9.85,10.27,9.85a10.08,10.08,0,0,0,7.47-3.53l-.42-.63a7.92,7.92,0,0,1-1,.86,10.65,10.65,0,0,1-6.16,1.94A7.51,7.51,0,0,1,2.7,14.53c0-4.82,1.92-9.13,7.37-9.13,4.07,0,7.37,2.74,7.37,7a6.65,6.65,0,0,1-1.46,4l.72.62a7.79,7.79,0,0,0,2.23-3.91,16,16,0,0,1,3.51-3.27,1,1,0,0,0,1.35-.17A1,1,0,0,0,23.64,8.3ZM10.08,21c.39.09.18-.36.48-.56s.75-.39.81-.69a1.58,1.58,0,0,1-.93.05,6.43,6.43,0,0,1-1.27-.49,2,2,0,0,0,.15,1A1,1,0,0,0,10.08,21Z" transform="translate(0 0)"/>
+</svg>
+
+
+
+    
+      <span
+      >
+        heise-Bot
+      </span>
+</a>
+
+    
+
+<a
+  
+  href="/benachrichtigungen"
+  class="
+    link
+    notification-links__link
+  "
+  name="topnavi.ho.sitemap.pushnachrichten"
+  data-google-interstitial=false
+>
+      
+
+
+
+
+<svg
+  id="cp-bell-outline"
+  xmlns="http://www.w3.org/2000/svg"
+  class="link__svg"
+  viewBox="0 0 24 24"
+>
+  <title>heiseframe_title</title>
+  <path d="M15,20.9c0,1.6-1.3,2.9-3,3c-1.6-0.1-2.9-1.4-3-3h1.7c0,0,0,0,0,0.1c0,0.7,0.6,1.3,1.3,1.3 c0.7,0,1.3-0.6,1.3-1.3c0,0,0,0,0-0.1H15z M21.9,17.2v1.7H2.1v-1.7C6.9,15.6,4.2,6.7,8.9,4c0.6-0.4,1-1.1,1-1.8l0,0 c0-1,0.7-2,1.7-2.2C11.9,0,12.1,0,12.4,0c1,0.2,1.7,1.1,1.7,2.1l0,0c0,0.7,0.4,1.4,1,1.8C19.7,6.7,17.1,15.6,21.9,17.2z M19.2,16.9 c-4-2-1.4-9.6-5.8-12.2c-0.1-0.1-0.2-0.1-0.4-0.2c-0.3-0.2-0.6-0.3-1-0.3c-0.3,0-0.6,0.1-0.9,0.2c-0.2,0.1-0.3,0.1-0.5,0.2 C6.1,7.4,8.8,14.9,4.8,16.9H19.2z"/>
+</svg>
+
+
+
+    
+      <span class="a-u-hide-from-tablet">
+        Push
+      </span>
+      <span class="a-u-show-from-tablet">
+        Push-Nachrichten
+      </span>
+    
+</a>
+
+
+    
+    <a-color-scheme class="a-u-show-from-tablet a-cholor-scheme-tablet"></a-color-scheme>
+
+</div>
+
+
+        </div>
+      </div>
+
+    </header>
+    
+</div>
+
+
+    <template id="upscore-reco-template-free">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<article
+  class="
+    a-article-teaser
+    a-article-teaser--mobile-in-list
+    a-theme
+    
+  "
+    data-upscore-object-id="${object_id}"
+  data-cid="${object_id}"
+>
+
+    <a
+      href="${url}"
+      title="${title}"
+      class="
+        a-article-teaser__link
+      "
+        data-upscore-url
+      
+    >
+    
+
+    
+  
+
+<figure
+  class=" a-article-teaser__image-container"
+>
+
+  <div
+  >
+      
+
+
+
+<a-img
+  width="16"
+  height="9"
+  layout="responsive"
+  src="${image}"
+  alt="${title}"
+  quality="70"
+  high-dpi-quality="50"
+  
+  style="
+    
+      aspect-ratio: 16 / 9;"
+>
+  <img
+    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='696px' height='391px' viewBox='0 0 696 391'%3E%3Crect x='0' y='0' width='696' height='391' fill='%23f2f2f2'%3E%3C/rect%3E%3C/svg%3E"
+    width="16"
+    height="9"
+    alt="${title}"
+    style="aspect-ratio: 16 / 9; object-fit: cover;"
+  >
+</a-img>
+
+<noscript>
+  
+
+
+
+<img
+  src="https://heise.cloudimg.io/width/16/q50.png-lossy-50.webp-lossy-50.foil1/_www-heise-de_/$%7Bimage%7D"
+  srcset="
+    https://heise.cloudimg.io/width/336/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 336w,
+    https://heise.cloudimg.io/width/1008/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 1008w,
+    https://heise.cloudimg.io/width/16/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 16w,
+    https://heise.cloudimg.io/width/32/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 32w
+  "
+    sizes=""
+  alt="${title}"
+  width="16"
+  height="9"
+  class="legacy-img "
+  loading="lazy"
+  decoding="async"
+  style="background-color: #f2f2f2;"
+  onload="this.style=null;"
+>
+
+</noscript>
+
+
+  </div>
+
+</figure>
+
+
+
+
+  <div
+    class="
+      a-article-teaser__content-container
+      
+    "
+  >
+    <header>
+
+      <h3
+        class="
+          a-article-teaser__title
+            
+        "
+      >
+          <span class="
+              a-article-teaser__kicker
+              
+            "
+          >
+            ${intro}
+          </span>
+
+        <span class="a-article-teaser__title-text" data-upscore-title>
+          ${title}
+        </span>
+      </h3>
+    </header>
+
+    
+    <p class="
+      a-article-teaser__synopsis
+      
+      "
+      >${lead}    </p>
+
+    
+
+    
+
+  </div>
+
+  </a>
+
+      
+
+
+
+  
+
+</article>
+
+
+
+
+
+</template>
+
+<template id="upscore-reco-template-premium">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<article
+  class="
+    a-article-teaser
+    a-article-teaser--mobile-in-list
+    a-theme
+    
+  "
+    data-upscore-object-id="${object_id}"
+  data-cid="${object_id}"
+>
+
+    <a
+      href="${url}"
+      title="${title}"
+      class="
+        a-article-teaser__link
+      "
+        data-upscore-url
+      
+        data-google-interstitial=false
+    >
+    
+
+    
+  
+
+<figure
+  class=" a-article-teaser__image-container"
+>
+
+  <div
+  >
+      
+
+
+
+<a-img
+  width="16"
+  height="9"
+  layout="responsive"
+  src="${image}"
+  alt="${title}"
+  quality="70"
+  high-dpi-quality="50"
+  
+  style="
+    
+      aspect-ratio: 16 / 9;"
+>
+  <img
+    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='696px' height='391px' viewBox='0 0 696 391'%3E%3Crect x='0' y='0' width='696' height='391' fill='%23f2f2f2'%3E%3C/rect%3E%3C/svg%3E"
+    width="16"
+    height="9"
+    alt="${title}"
+    style="aspect-ratio: 16 / 9; object-fit: cover;"
+  >
+</a-img>
+
+<noscript>
+  
+
+
+
+<img
+  src="https://heise.cloudimg.io/width/16/q50.png-lossy-50.webp-lossy-50.foil1/_www-heise-de_/$%7Bimage%7D"
+  srcset="
+    https://heise.cloudimg.io/width/336/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 336w,
+    https://heise.cloudimg.io/width/1008/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 1008w,
+    https://heise.cloudimg.io/width/16/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 16w,
+    https://heise.cloudimg.io/width/32/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 32w
+  "
+    sizes=""
+  alt="${title}"
+  width="16"
+  height="9"
+  class="legacy-img "
+  loading="lazy"
+  decoding="async"
+  style="background-color: #f2f2f2;"
+  onload="this.style=null;"
+>
+
+</noscript>
+
+
+  </div>
+
+</figure>
+
+
+
+
+  <div
+    class="
+      a-article-teaser__content-container
+      
+    "
+  >
+    <header>
+
+      <h3
+        class="
+          a-article-teaser__title
+            
+        "
+      >
+          <span class="
+              a-article-teaser__kicker
+              
+            "
+          >
+            ${intro}
+          </span>
+
+        <span class="a-article-teaser__title-text" data-upscore-title>
+            
+
+
+
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    role="img"
+    preserveAspectRatio="xMinYMin"
+     class="heise-plus-logo a-article-teaser__plus-icon"
+>
+
+   <style>
+    .plus-icon-svg-rec {
+      fill: #14315b;
+    }
+    .plus-icon-svg-path {
+      fill: #f2f2f2;
+    }
+    .dark .plus-icon-svg-rec {
+      fill: #f2f2f2;
+    }
+    .dark .plus-icon-svg-path {
+     fill: #323232;
+    }
+  </style>
+  <rect class="plus-icon-svg-rec" width="32" height="32" rx="12" ry="12"/>
+  <path class="plus-icon-svg-path" d="M24 14.3h-6.3V8h-3.4v6.3H8v3.4h6.3V24h3.4v-6.3H24z"/>
+</svg>
+
+
+
+          ${title}
+        </span>
+      </h3>
+    </header>
+
+    
+    <p class="
+      a-article-teaser__synopsis
+      
+      "
+      >${lead}    </p>
+
+    
+
+    
+
+  </div>
+
+  </a>
+
+      
+
+
+
+  
+
+</article>
+
+
+
+
+
+</template>
+
+<template id="upscore-reco-template-wrapper-homepage">
+  <div class="teaser-grid teaser-grid--3 top-stage__row">${content}</div>
+</template>
+
+
+<template id="upscore-reco-template-wrapper-article-premium">
+  <aside class="stage stage--channel a-u-grid-pullout-mobile a-u-grid-pushin-mobile" aria-role="complementary">
+    <header
+      class="a-container-header stage__header stage__header--no-mobile-padding a-container-header--bordered a-container-header--one-row">
+      <a href="/plus/" class="a-container-header__link">
+        <h2 class="
+            a-container-header__heading
+            a-container-header__heading--small
+          ">
+          <span class="
+              a-container-header__logo
+              a-container-header__logo--heiseplus
+              a-container-header__logo--margin
+            ">
+            heise+
+          </span>
+          <span class="a-container-header__slug">
+            Das Beste aus heise+
+          </span>
+        </h2>
+        <nav class="a-container-header__more">
+          <span class="
+              a-container-header__more-text
+              a-u-show-from-tablet
+            ">
+            Zur heise+ Startseite
+          </span>
+          <span class="a-container-header__more-icon"></span>
+        </nav>
+      </a>
+    </header>
+    <div class="
+        teaser-grid
+        teaser-grid--h-gutter
+        teaser-grid--4
+        channel_ho
+      ">
+      ${content}
+    </div>
+  </aside>
+</template>
+
+
+<template id="upscore-reco-template-wrapper-article">
+  <aside class="stage stage--channel a-u-grid-pullout-mobile a-u-grid-pushin-mobile" aria-role="complementary">
+    <header
+      class="a-container-header stage__header stage__header--no-mobile-padding a-container-header--bordered a-container-header--one-row">
+      <a href="/" class="a-container-header__link">
+        <h2 class="
+            a-container-header__heading
+            a-container-header__heading--small
+          ">
+          <span class="
+              a-container-header__logo
+              a-container-header__logo--ho
+              a-container-header__logo--margin
+            ">
+            heise online
+          </span>
+          <span class="a-container-header__slug">
+            Top-Beiträge von heise online
+          </span>
+        </h2>
+        <nav class="a-container-header__more">
+          <span class="
+              a-container-header__more-text
+              a-u-show-from-tablet
+            ">
+            Zur heise online Startseite
+          </span>
+          <span class="a-container-header__more-icon"></span>
+        </nav>
+      </a>
+    </header>
+    <div class="
+        teaser-grid
+        teaser-grid--h-gutter
+        teaser-grid--4
+        channel_ho
+      ">
+      ${content}
+    </div>
+  </aside>
+</template>
+
+<template id="upscore-reco-template-wrapper-article-en">
+  <aside class="stage stage--channel a-u-grid-pullout-mobile a-u-grid-pushin-mobile" aria-role="complementary">
+    <header
+      class="a-container-header stage__header stage__header--no-mobile-padding a-container-header--bordered a-container-header--one-row">
+      <a href="/" class="a-container-header__link">
+        <h2 class="
+            a-container-header__heading
+            a-container-header__heading--small
+          ">
+          <span class="
+              a-container-header__logo
+              a-container-header__logo--ho
+              a-container-header__logo--margin
+            ">
+            heise online
+          </span>
+          <span class="a-container-header__slug">
+            Most popular articles by heise online
+          </span>
+        </h2>
+      </a>
+    </header>
+    <div class="
+        teaser-grid
+        teaser-grid--h-gutter
+        teaser-grid--4
+        channel_ho
+      ">
+      ${content}
+    </div>
+  </aside>
+</template>
+
+
+    
+
+      <div class="a-layout a-layout--transparent a-u-no-margin-bottom">
+        <div
+          class=" a-layout__container a-layout__container--full-width"
+        >
+          <div class="a-layout__item a-layout__item--full-width">
+            <div class="ad-ldb-container">
+              <script>performance.mark('FRAME-Ads Anfang');</script>
+              <div class="perf-cls-reduc-leaderboard">
+                
+
+
+
+  
+    
+    <div
+      id="HEI_D_Top"
+      
+      class=""
+    ></div>
+  
+
+
+                  
+
+
+
+  
+    
+    <div
+      id="HEI_M_Top"
+      
+      class="ad ad--top"
+    ></div>
+  
+
+
+              </div>
+              
+
+<div class="ad ad--skyscraper a-u-show-from-tablet">
+  
+
+  
+    
+    <div
+      id="HEI_D_Right"
+      
+      class=""
+    ></div>
+  
+
+</div>
+
+              <script>
+                performance.mark('FRAME-Ads Ende');
+                performance.measure('FRAME-Ads', 'FRAME-Ads Anfang', 'FRAME-Ads Ende');
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="a-layout a-u-mb-4" id="bottom-up">
+
+        <script>performance.mark('HEADER Anfang');</script>
+  
+        <div class="
+          a-layout__container
+          a-layout__container--full-width
+          a-layout__container--mobile-offset
+        ">
+          <div class="a-layout__item a-layout__item--full-width">
+
+            
+
+            
+
+
+
+<header class="header ">
+
+  <a-collapse
+    media="(max-width: 767px)"
+    toggle-attr-on-media="disabled"
+  >
+    <div class="header__menu">
+
+      
+
+      
+
+<figure class="header-logo ">
+  <a
+    href="/"
+    title="heise online"
+    data-google-interstitial=false
+  >
+    
+
+      
+
+
+
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1504 214"
+  role="img"
+  preserveAspectRatio="xMinYMin"
+  class="heise-online-logo header-logo__svg header-logo__svg--mobile"
+>
+  <style>
+    .heise-online-logo-svg-path-online {
+      fill: #6f7d93;
+    }
+    .heise-online-logo-svg-path-heise {
+      fill: #14315b;
+    }
+    .dark .heise-online-logo-svg-path-online,
+    .dark .heise-online-logo-svg-path-heise {
+      fill: #f2f2f2;
+    }
+  </style>
+  <title>heiseframe_title</title>
+  <path class="heise-online-logo-svg-path-online" d="M869.84 139.56c0-43.75 29.74-69 62.47-69s62.47 25.25 62.47 69-29.74 68.79-62.47 68.79-62.47-25.25-62.47-68.79m93.29 0c0-26.32-11.55-43.86-30.81-43.86s-30.81 17.54-30.81 43.86 11.55 43.65 30.81 43.65 30.81-17.33 30.81-43.65m49.9-65.79h25.25l2.35 17.76h.86c11.77-11.45 25.14-20.97 43.11-20.97 28.13 0 40.44 19.04 40.44 52.2v82.37h-30.81v-78.41c0-21.61-6.2-29.74-20.43-29.74-11.55 0-19.15 5.67-29.95 16.37v91.78h-30.81V73.77Zm135.54 97.56V16.22h30.81v156.72c0 7.6 3.42 10.27 6.63 10.27 1.39 0 2.46 0 4.81-.54l3.85 23c-3.74 1.5-8.88 2.67-16.26 2.67-21.82 0-29.85-14.12-29.85-37.01Zm52.93-138c0-10.38 8.13-17.44 19.04-17.44s19.04 7.06 19.04 17.44-8.13 17.44-19.04 17.44-19.04-7.27-19.04-17.44m3.53 40.44h30.81v131.37h-30.81zm54.66 0h25.25l2.35 17.76h.86c11.77-11.45 25.14-20.97 43.11-20.97 28.13 0 40.44 19.04 40.44 52.2v82.37h-30.81v-78.41c0-21.61-6.2-29.74-20.43-29.74-11.55 0-19.15 5.67-29.95 16.37v91.78h-30.81V73.77Zm129.52 65.79c0-42.68 29.63-69 60.55-69 35.52 0 54.24 25.67 54.24 62.37 0 5.88-.64 11.77-1.34 14.98h-83.39c2.57 23.32 17.54 36.59 38.73 36.59 11.23 0 20.86-3.53 30.49-9.52l10.48 19.15c-12.52 8.45-28.35 14.23-45.04 14.23-36.26 0-64.72-25.46-64.72-68.79Zm88.15-12.62c0-20.22-8.99-32.52-26.96-32.52-15.3 0-28.78 11.45-31.45 32.52z"/><path class="heise-online-logo-svg-path-heise" d="M258.47 15.22h30.81v48.89L288 89.46c11.02-10.38 24.07-19.9 42.04-19.9 28.13 0 40.44 19.04 40.44 52.2v82.37h-30.81v-78.41c0-21.61-6.2-29.74-20.43-29.74-11.55 0-19.15 5.67-29.95 16.37v91.78h-30.81V15.22Zm129.58 123.34c0-42.68 29.63-69 60.55-69 35.52 0 54.24 25.67 54.24 62.37 0 5.88-.64 11.77-1.34 14.98h-83.39c2.57 23.32 17.54 36.59 38.73 36.59 11.23 0 20.86-3.53 30.49-9.52l10.48 19.15c-12.52 8.45-28.35 14.23-45.04 14.23-36.26 0-64.72-25.46-64.72-68.79Zm88.14-12.62c0-20.22-8.99-32.52-26.96-32.52-15.3 0-28.78 11.45-31.45 32.52zm41.46-93.6c0-10.38 8.13-17.44 19.04-17.44s19.04 7.06 19.04 17.44-8.13 17.44-19.04 17.44-19.04-7.27-19.04-17.44m3.53 40.43h30.81v131.37h-30.81zm44.04 116.29 14.33-19.58c11.66 9.09 22.95 14.66 36.26 14.66 14.33 0 21.07-6.74 21.07-15.72 0-11.02-14.23-15.94-28.24-21.29-17.22-6.47-36.91-16.37-36.91-38.3s18.4-39.26 47.82-39.26c18.29 0 32.95 7.43 43.65 15.73l-14.12 18.93c-9.2-6.74-18.45-11.45-28.78-11.45-13.21 0-19.47 6.31-19.47 14.55 0 10.38 13.27 14.33 27.49 19.58 17.76 6.63 37.65 15.19 37.65 39.69 0 22.57-17.86 40.76-51.03 40.76-17.97 0-36.91-7.7-49.74-18.29Zm111.39-50.5c0-42.68 29.63-69 60.55-69 35.52 0 54.24 25.67 54.24 62.37 0 5.88-.64 11.77-1.34 14.98h-83.39c2.57 23.32 17.54 36.59 38.73 36.59 11.23 0 20.86-3.53 30.49-9.52l10.48 19.15c-12.52 8.45-28.35 14.23-45.04 14.23-36.26 0-64.72-25.46-64.72-68.79Zm88.15-12.62c0-20.22-8.99-32.52-26.96-32.52-15.3 0-28.78 11.45-31.45 32.52zM114.88 2.89c15.41 7.19 22.08 25.51 14.89 40.92l-71.06 152.4c-7.19 15.41-25.51 22.08-40.92 14.9C2.38 203.92-4.29 185.6 2.9 170.18L73.95 17.79C81.14 2.38 99.46-4.29 114.88 2.9m49.2 97.26c-15.41-7.18-33.73-.52-40.92 14.9l-25.7 55.12c-7.19 15.41-.52 33.74 14.89 40.93s33.73.52 40.92-14.89l25.71-55.12c7.19-15.42.52-33.74-14.9-40.93"/>
+</svg>
+
+
+    
+  </a>
+</figure>
+
+      <div class="header_menu-group">
+        <a href="/plus"
+          title="Jetzt heise+ abonnieren"
+          name="header.ho.heiseplus"
+          data-google-interstitial=false
+          class="header_abo-link">
+
+            
+
+
+
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    role="img"
+    preserveAspectRatio="xMinYMin"
+     class="heise-plus-logo navigation__heiseplus-logo"
+>
+
+   <style>
+    .plus-icon-svg-rec {
+      fill: #14315b;
+    }
+    .plus-icon-svg-path {
+      fill: #f2f2f2;
+    }
+    .dark .plus-icon-svg-rec {
+      fill: #f2f2f2;
+    }
+    .dark .plus-icon-svg-path {
+     fill: #323232;
+    }
+  </style>
+  <rect class="plus-icon-svg-rec" width="32" height="32" rx="12" ry="12"/>
+  <path class="plus-icon-svg-path" d="M24 14.3h-6.3V8h-3.4v6.3H8v3.4h6.3V24h3.4v-6.3H24z"/>
+</svg>
+
+
+
+            Abo
+        </a>
+
+        <div
+          class="header__collapse-toggle"
+          data-collapse-trigger
+          title="Menü auf-/zuklappen"
+        >
+          <svg class="menu-icon header__menu_mobile-icon">
+            <use href="/icons/common-icons.svg#menu-mobile"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__content" data-collapse-target>
+
+      
+
+        <a href="https://www.heisegroup.de"
+  title="heise kennenlernen"
+  name="header.ho.heise96"
+  class="header-logo__heise96">
+    <img src="/icons/ho/heise96_light.svg" alt="heise kennenlernen" class="header-logo__heise96-logo" />
+    <img src="/icons/ho/heise96_dark.svg" alt="heise kennenlernen" class="header-logo__heise96-logo header-logo__heise96-logo--dark" />
+</a>
+
+        <form
+  accept-charset="utf-8"
+  method="get"
+  action="/suche/"
+  class="a-form header__search"
+  role="search"
+  id="volltextsuche"
+>
+  <fieldset class="header__search-container">
+    <input
+      type="search"
+      class="
+        a-form__input
+        header__search-input
+      "
+      value=""
+      name="q"
+      placeholder="Suchen"
+      data-autocomplete="true"
+      data-searchpath="/suche/"
+      autocomplete="off"
+      role="textbox"
+      aria-autocomplete="list"
+      aria-haspopup="true"
+      aria-label="Suchen"
+      spellcheck="false"
+    >
+
+    <button class="header__search-button" type="submit" aria-label="suchen">
+        <svg class="header__search-icon">
+          <use href="/icons/common-icons.svg#search"></use>
+        </svg>
+    </button>
+
+    <input
+      type="hidden"
+      name="sort_by"
+      value="relevance"
+    >
+  </fieldset>
+</form>
+
+
+        
+          <a-collapse-group target="a-menu">
+
+            <div class="header__nav">
+              
+
+              
+
+
+
+
+
+
+<div class="magazine-nav header__magazine-nav">
+  <ul class="magazine-nav__items a-u-remove-list-style">
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--ct
+          a-theme
+          a-theme--ct
+        "
+      >
+        
+        
+        <a
+          href="/ct/"
+          title="c't – Magazin für Computertechnik"
+          name="topnavi.ho.magazine-nav.ct"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--ct"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 370"
+  class="ct-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M329,0H429.54L406.65,93.08H500L477.72,183.7H384.29l-10.5,42.73s-3.22,10.79-2.08,17.61a26.5,26.5,0,0,0,5.07,12.62c3.63,5.13,6.81,7.56,12.56,10.09,5.46,2.39,15.07,2.51,15.07,2.51h73L452.6,370h-76c-66.62.67-108.38-45.12-108.38-101.55,0-12.32,3.53-32,11-66.06L284,183,329,0ZM231.46,0,211.65,80.56h42.5L228.78,183.7h43L317,0Zm-57.8,93.08C75.55,92.93,0,188.15,0,268.08,0,324.52,41.32,371.47,108.08,370H211.86l24.76-100.71H130.27c-21.92-.12-28.59-22.21-28.59-35.61,0-23.49,26.37-49.88,51.77-49.95H216.8l22.28-90.62Z" fill="#2288c6"/>
+
+</svg>
+
+
+
+
+          <span class="magazine-nav__title">
+            c't – Magazin für Computertechnik
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--ix
+          a-theme
+          a-theme--ix
+        "
+      >
+        
+        
+        <a
+          href="/ix/"
+          title="iX – Magazin für professionelle Informationstechnik"
+          name="topnavi.ho.magazine-nav.ix"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--ix"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 600 610"
+  class="ix-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M238.41,610h-139L346.17,248.34,294.41,69.72H421.75l12.81,45.67,31.26-45.67H600L475.16,252.6l70.42,242.66H418.23L387.41,385.48Zm-100-20.61h89.17L395.36,337.6l38.47,137h84.33L452.68,249,561,90.34H476.67l-50,73.08-20.5-73.08H321.82l46.83,161.6Zm-2.07-95.46H0L186.69,220.48H323ZM39,473.31h86.47L284,241.1h-86.4ZM260.28,183.12A91.56,91.56,0,1,1,323,25l2,1.89L306.87,46.13l-2-1.88a65,65,0,1,0-21.15,108l2.56-1L295.83,176l-2.56,1A91,91,0,0,1,260.28,183.12Z" fill="#4c5c64"/>
+</svg>
+
+
+
+          <span class="magazine-nav__title">
+            iX – Magazin für professionelle Informationstechnik
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--foto
+          a-theme
+          a-theme--foto
+        "
+      >
+        
+        
+        <a
+          href="/foto/"
+          title="c't Fotografie - Das Magazin rund ums digitale Bild"
+          name="topnavi.ho.magazine-nav.foto"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--foto"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 203 39.2"
+  class="foto-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M58.3,7.5l-1.5,5.1h6.8l-2,6.7H54.9L51.4,31.2H45.2L54.1.8H67.8l-2,6.7ZM80.1,22.4c-1.8,6-6.7,9.4-11.1,9.4s-7.4-3.4-5.6-9.4S69.9,13,74.4,13,81.8,16.4,80.1,22.4Zm-11.6,0c-.7,2.2,0,4,2,4s3.7-1.7,4.3-4,0-4-2-4S69.1,20.2,68.5,22.4Zm17.6,8.8H81.2l3.7-12.5H83.2l1.5-5.2h1.6l1.6-5.3h4.9l-1.6,5.3h2.8l-1.5,5.2H89.8Zm24.4-8.8c-1.8,6-6.7,9.4-11.1,9.4s-7.4-3.4-5.6-9.4,6.7-9.4,11.2-9.4S112.3,16.4,110.6,22.4ZM99,22.4c-.7,2.2,0,4,2,4s3.7-1.7,4.3-4,0-4-2-4S99.6,20.2,99,22.4Zm28.6,7.1c-2.2,7.5-6,10.5-11.2,10.5-3.2,0-6.9-2.1-6-6.7H116a1.5,1.5,0,0,0,.5,1.3,2.1,2.1,0,0,0,1.3.4c2.7,0,3.8-2.2,4.7-5.1l.2-.8c-1.8,1.6-3.3,2.4-5.1,2.4-4.1,0-5.7-3.9-4.2-9s5.7-9.6,9.9-9.6a3.2,3.2,0,0,1,3.4,2.4h.1l.5-1.9h4.9Zm-9-7.2c-.7,2.2,0,4,2,4s3.7-1.7,4.3-4,0-4-2-4S119.2,20.1,118.6,22.3Zm22-5.8h.1a6.7,6.7,0,0,1,5.4-3.1h1l-1.8,6a2.7,2.7,0,0,0-1.9-.6c-2.7,0-4.1,2.3-5,5.3l-2.1,7.1h-4.9l5.2-17.6h4.9Zm19.1,14.8h-4.9l.6-2h-.1a6.5,6.5,0,0,1-5,2.5c-4.1,0-5.8-4.4-4.3-9.4s5.6-9.4,9.7-9.4a3.7,3.7,0,0,1,3.6,2.3l.5-1.7h4.9Zm-8.6-8.8c-.7,2.2,0,4,2,4s3.7-1.7,4.3-4,0-4-2-4S151.7,20.2,151.1,22.4Zm18.4,8.8h-4.9l3.7-12.5h-1.7l1.5-5.2h1.7l.7-2.2c.7-2.4,1.3-4.2,3.2-6.2a8.2,8.2,0,0,1,5.7-2.8,2.9,2.9,0,0,1,1.9.6l-1.6,5.4a2.7,2.7,0,0,0-1.6-.6c-1.3,0-2,1-2.6,3l-.8,2.9h3.5l-1.5,5.2h-3.5Zm11.6,0h-4.9l5.2-17.6h4.9Zm7.5-24.4c-.6,1.9-2.3,3.5-3.8,3.5s-2.3-1.6-1.7-3.5,2.3-3.5,3.8-3.5S189.1,4.9,188.6,6.8Zm13.6,16.6H191.7c-.7,2.5-.1,3.9,1.9,3.9a3.4,3.4,0,0,0,2.8-1.6h4.8a10.1,10.1,0,0,1-8.9,6.1c-4.6,0-7.1-3.3-5.3-9.4S193,13,197.6,13s6.5,3.8,4.8,9.8Zm-3.5-3.6c.2-1.7-.7-2.8-2-2.8a4.3,4.3,0,0,0-3.8,2.8Z" transform="translate(0 -0.8)" fill="#fc0"/>
+  <path d="M34.4,8.4l1.7-6.8L35.3.8,33.4,8.4Zm2.7,22.7H30.9a9.1,9.1,0,0,1-6.1-2.1A8.8,8.8,0,0,0,31.7,32H38l2-8.3-.8-.8ZM41,8.4l-1.8,7.4H31.5l-.9,3.5a4.1,4.1,0,0,0-.2,1.4,2.2,2.2,0,0,0,.4,1,2.1,2.1,0,0,0,.7.7,2.2,2.2,0,0,1-.3-.9,4.1,4.1,0,0,1,.2-1.4l.9-3.5H40l1.8-7.4Zm-20.2-1H17.4l.8.8h2.5ZM26,.8,22.3,15.9H18.8l.8.8h3.5L26.8,1.6ZM12.6,15.9a3.8,3.8,0,0,0-1.8.5,5.2,5.2,0,0,0-1.5,1.3,4.2,4.2,0,0,0-.8,1.7A3.4,3.4,0,0,0,8.5,21a2.7,2.7,0,0,0,1,1.5h.2a3.4,3.4,0,0,1-.4-1A3.3,3.3,0,0,1,9.7,19,5.2,5.2,0,0,1,11,17.6a4.5,4.5,0,0,1,1.7-.8h5.9l1.8-7.4-.8-.8-1.8,7.4Zm4.8,15.3H9.1a9.7,9.7,0,0,1-3.7-.5,8.2,8.2,0,0,1-2.1-1.1l-.4-.4.4.4.4.4.9.7A7.1,7.1,0,0,0,8.9,32h9.3l2.1-8.3-.8-.8Z" transform="translate(0 -0.8)" fill="#bbbcbe"/>
+  <path d="M19,.8,17.4,7.4h3.5l-2.1,8.5h3.5L26,.8Zm8,0L22.9,17.4a30.2,30.2,0,0,0-.9,5.4c0,4.6,3.4,8.4,8.9,8.3h6.2l2-8.3h-6a4,4,0,0,1-1.2-.2,2.4,2.4,0,0,1-1.4-1.9,4.1,4.1,0,0,1,.2-1.4l.9-3.5h7.7L41,8.4H33.4L35.3.8ZM14.3,8.4C6.2,8.4,0,16.2,0,22.8c0,4.6,3.4,8.5,8.9,8.4h8.5l2-8.3H10.7c-1.8,0-2.3-1.8-2.3-2.9a4.6,4.6,0,0,1,4.2-4.1h5.2l1.8-7.4Z" transform="translate(0 -0.8)" fill="#87888a"/>
+</svg>
+
+
+
+
+          <span class="magazine-nav__title">
+            c't Fotografie - Das Magazin rund ums digitale Bild
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--macandi
+          a-theme
+          a-theme--macandi
+        "
+      >
+        
+        
+        <a
+          href="/mac-and-i/"
+          title="Mac &amp; i – Nachrichten, Tests, Tipps und Meinungen rund um Apple"
+          name="topnavi.ho.magazine-nav.macandi"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--macandi"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 600 145"
+  class="mac-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M115.67,142.81l8.41-57c2.33-15.42,4.66-29.45,7.1-42.59-6.78,15.58-13.49,30.1-19.25,41.61L84,140.61H59.55l-4.9-55.72c-.89-11-1.75-25.1-2.56-42q-1,4.95-2.07,9.94c-2.56,12.32-5,24-7.2,33.5L29.2,142.81H0L34.41,5.59H75.26l4.3,52.33c.2,3.22.44,6.59.69,10.1.62,8.54,1.3,18,1.59,27.5C87.05,81.44,93.6,67.27,98.27,57.44L123.59,5.59h41.35L146.41,142.81Zm115.07-16c-.07,1.09-.15,2.18-.22,3.25-.28,4-.55,7.77-.67,11.29l0,1.43H259l-.05-1.43c-.41-12.63,1.74-31.88,4-43.57l10.41-52.29-1.18-.37a115.86,115.86,0,0,0-32.73-4.86c-48.93,0-71.21,36-71.21,69.41,0,21.12,12.42,35.3,30.91,35.3C211.76,145,222.84,138.59,230.74,126.84Zm7-61.49L233.67,86.5c-4.61,24.06-14.94,32.59-22.38,32.59-9,0-10.39-9.25-10.39-14.77,0-18.27,13.43-39.51,30.74-39.51A38.56,38.56,0,0,1,237.79,65.35Zm115,74.12.79-.38-.23-24.64-1.88.75a47.9,47.9,0,0,1-18.83,3.89c-8.59,0-17.77-4.93-17.77-18.77C314.85,78,331.2,66,346.58,66a31.81,31.81,0,0,1,12.64,2.28l1.38.58L368.66,44l-1.26-.46A61.37,61.37,0,0,0,347,40.29c-37.07,0-65,27.19-65,63.23,0,25.08,16.67,41.28,42.48,41.28C335.29,144.8,345.88,142.81,352.77,139.47Zm222.05,3.34L593.9,42.49H562.36L543.28,142.81Zm6.84-109.72c10.62,0,18.34-7.38,18.34-17.54,0-9.3-6.41-15.55-16-15.55a17.65,17.65,0,0,0-17.94,17.74c0,9,6.23,15.35,15.15,15.35ZM510,140.52l2,2.29H474.44l-.41-.44a72.72,72.72,0,0,1-5.6-7l-.86-1.17c-10.26,7.29-22,10.83-35.81,10.83-26.17,0-43.07-14.48-43.07-36.89,0-17.69,10.88-31.92,32.36-42.3-4.79-8.23-7-15.42-7-22.53C414,20.16,432.3,3.39,457.5,3.39,478.73,3.39,493,16,493,34.7c0,15.14-10.48,27.18-33,37.82,5,7.75,11.49,16.76,16.31,23.38A88.38,88.38,0,0,0,489,74.78h29.56c-7.19,17.43-15.84,30.6-27.31,41.69A293,293,0,0,0,510,140.52Zm-55.62-25C447,105.82,438.81,94.22,432.2,84c-5.22,4-11.42,10.16-11.42,19.14,0,10.67,7.52,17.57,19.16,17.57A22,22,0,0,0,454.4,115.49ZM464.69,34.9c0-2.39-.71-10.19-9.79-10.19-6.94,0-12.38,6.84-12.38,15.57a25.7,25.7,0,0,0,5,15C455.61,51.41,464.69,44.82,464.69,34.9Z" fill="#2a2521"/>
+</svg>
+
+
+
+
+          <span class="magazine-nav__title">
+            Mac &amp; i – Nachrichten, Tests, Tipps und Meinungen rund um Apple
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--make
+          a-theme
+          a-theme--make
+        "
+      >
+        
+        
+        <a
+          href="/make/"
+          title="Make – Kreativ mit Technik"
+          name="topnavi.ho.magazine-nav.make"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--make"
+        >
+
+
+
+          
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 600 178"
+  class="make-logo magazin-nav__svg"
+>
+  <title>heiseframe_title</title>
+  <path d="M559.08,49.1H600V85.87H559.08Zm0,89.6H600v36.77H559.08ZM430,112.34c0-49.1,37.39-66,63.39-66s58,13,58,70.41v5.76H467.76c1.92,20.91,13.51,28.89,29.33,28.89,14.92,0,28.83-7.37,37.4-15.15L549.2,159c-14.71,12.52-32.86,19-54.93,19C461.41,178,430,161.13,430,112.34ZM517.15,100c-1.91-17.78-9.88-26.26-24.19-26.26-11.89,0-22,7.77-24.79,26.26ZM319.3,0h38.1V96.17L396.71,49h40.92L396.41,96.17,440,175.37H400.74l-27.92-51.52L357.4,141.13v34.14H319.3V0ZM188.68,143.15c0-29.2,24.59-45.26,79.92-49.81V90.21c0-9.29-4.73-15.15-17-15.15-16,0-29.73,6.57-41.42,15.66l-16-21.82c12.5-11.32,31.45-22.53,62.89-22.53,34.47,0,48.79,17.07,48.79,49.5v48.69c0,15.16,1,24.45,3.52,30.81H271.43a61.15,61.15,0,0,1-2.83-18.48c-11.59,13-25.29,20.4-44,20.4C205.31,177.19,188.68,164.67,188.68,143.15Zm79.92-5.56V114.26c-30,3.13-42.83,10.7-42.83,22.22,0,8.08,5.74,12.12,13.91,12.12C253.08,148.6,262.25,144.06,268.6,137.59ZM0,0H50.8l39,129h.41L126.69,0h52V175.47H141.61V55.66h-.4c-2.62,15.16-6,26.27-9.68,39.1l-26.2,80.61H71.16l-26-80.61A322.28,322.28,0,0,1,35,53.74h-.4V175.37H0V0Z" fill="#e2001a"/>
+</svg>
+
+
+
+          <span class="magazine-nav__title">
+            Make – Kreativ mit Technik
+          </span>
+
+
+        </a>
+      </li>
+    
+      <li
+        class="
+          magazine-nav__item
+          magazine-nav__item--select
+          a-theme
+          a-theme--select
+        "
+      >
+        
+        
+        <a
+          href="/select/"
+          title="Alle Magazine im Browser lesen"
+          name="topnavi.ho.magazine-nav.select"
+          data-google-interstitial=false
+          class="magazine-nav__link magazine-nav__link--select"
+        >
+
+
+
+          
+
+
+
+
+
+          <span class="magazine-nav__title">
+            Alle Magazine im Browser lesen
+          </span>
+
+
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+              
+
+
+<nav
+  class="navigation "
+  aria-label="heiseonline-Navigation"
+  role="navigation"
+>
+
+  <ul class="navigation__list navigation__list--two-cols">
+    
+    <li>
+      <a href="/plus"
+        title="heise+ - Immer mehr Wissen."
+        name="header.ho.heiseplus"
+        data-google-interstitial=false
+        class="navigation__logo-link navigation__head">
+
+          
+
+
+
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 860 200"
+    role="img"
+    preserveAspectRatio="xMinYMin"
+     class="heise-plus-logo navigation__heiseplus-logo"
+>
+  <style>
+    .plus-logo-svg-path-heise {
+      fill: #6f7d93;
+    }
+    .plus-logo-svg-path-plus {
+      fill: #14315b;
+    }
+    .dark .plus-logo-svg-path-heise,
+    .dark .plus-logo-svg-path-plus {
+      fill: #f2f2f2;
+    }
+  </style>
+
+  <path
+    class="plus-logo-svg-path-heise"
+    d="M786.24 179.42v-45.19h-43.23v-25.54h43.23V63.5h26.53v45.19H856v25.54h-43.23v45.19z"
+  />
+  <path
+    class="plus-logo-svg-path-plus"
+    d="M234.56 191.7V17.43h28.39v44.93l-.99 23.45c5.1-4.77 10.78-9.01 17.04-12.71 6.25-3.7 13.49-5.55 21.73-5.55 13 0 22.47 4.2 28.39 12.59 5.93 8.39 8.89 20.24 8.89 35.55v76.03h-28.39V119.4c0-10.04-1.48-17.11-4.44-21.23-2.96-4.11-7.82-6.17-14.57-6.17-5.27 0-9.92 1.28-13.95 3.83-4.04 2.55-8.6 6.29-13.7 11.23v84.67h-28.39ZM412 194.66c-11.19 0-21.32-2.51-30.37-7.53q-13.575-7.53-21.48-21.72c-5.27-9.46-7.9-20.86-7.9-34.19s2.67-24.52 8.02-34.06 12.3-16.87 20.86-21.97q12.84-7.65 26.91-7.65c11.02 0 20.24 2.43 27.65 7.28 7.41 4.86 13 11.6 16.79 20.24 3.78 8.64 5.68 18.64 5.68 29.99 0 5.92-.41 10.53-1.23 13.82H379.9c1.32 10.7 5.18 19.01 11.6 24.93s14.48 8.89 24.19 8.89c5.27 0 10.16-.78 14.69-2.35 4.52-1.56 9.01-3.74 13.46-6.54l9.63 17.77c-5.76 3.79-12.18 6.91-19.26 9.38s-14.49 3.7-22.22 3.7Zm-32.35-75.04h53.82c0-9.38-2.06-16.74-6.17-22.09-4.12-5.35-10.29-8.02-18.52-8.02-7.08 0-13.37 2.59-18.89 7.78-5.52 5.18-8.93 12.63-10.25 22.34Zm107.62-70.35c-5.1 0-9.22-1.48-12.34-4.44-3.13-2.96-4.69-6.91-4.69-11.85s1.56-8.64 4.69-11.6c3.12-2.96 7.24-4.44 12.34-4.44s9.22 1.48 12.34 4.44 4.69 6.83 4.69 11.6-1.57 8.89-4.69 11.85c-3.13 2.96-7.24 4.44-12.34 4.44M472.95 191.7V70.5h28.39v121.2zm85.47 2.96c-8.23 0-16.46-1.6-24.69-4.81s-15.31-7.2-21.23-11.97l13.33-18.27q8.145 6.18 16.29 9.87c8.145 3.69 11.19 3.7 17.28 3.7 6.58 0 11.44-1.4 14.57-4.2 3.12-2.8 4.69-6.25 4.69-10.37 0-3.46-1.28-6.29-3.83-8.52-2.55-2.22-5.8-4.2-9.75-5.92-3.95-1.73-8.07-3.41-12.34-5.06-5.27-1.97-10.49-4.4-15.68-7.28-5.18-2.88-9.42-6.58-12.71-11.11-3.29-4.52-4.94-10.16-4.94-16.91 0-10.7 3.95-19.42 11.85-26.17s18.6-10.12 32.1-10.12c8.56 0 16.21 1.48 22.96 4.44s12.59 6.34 17.53 10.12l-13.09 17.28q-6.42-4.68-12.96-7.53a34.1 34.1 0 0 0-13.7-2.84c-6.09 0-10.62 1.28-13.58 3.83s-4.44 5.72-4.44 9.5q0 7.155 7.41 10.86c4.94 2.47 10.7 4.86 17.28 7.16 5.59 1.97 11.02 4.4 16.29 7.28s9.67 6.63 13.21 11.23q5.31 6.915 5.31 18.27c0 10.37-4.03 19.22-12.1 26.54s-19.75 10.98-35.06 10.98Zm113.24 0c-11.19 0-21.32-2.51-30.37-7.53q-13.575-7.53-21.48-21.72c-5.27-9.46-7.9-20.86-7.9-34.19s2.67-24.52 8.02-34.06 12.3-16.87 20.86-21.97q12.84-7.65 26.91-7.65c11.02 0 20.24 2.43 27.65 7.28 7.41 4.86 13 11.6 16.79 20.24 3.78 8.64 5.68 18.64 5.68 29.99 0 5.92-.41 10.53-1.24 13.82h-77.03c1.32 10.7 5.18 19.01 11.6 24.93s14.48 8.89 24.19 8.89c5.27 0 10.16-.78 14.69-2.35 4.53-1.56 9.01-3.74 13.46-6.54l9.63 17.77c-5.76 3.79-12.18 6.91-19.26 9.38s-14.49 3.7-22.22 3.7Zm-32.34-75.04h53.82c0-9.38-2.06-16.74-6.17-22.09-4.12-5.35-10.29-8.02-18.52-8.02-7.08 0-13.37 2.59-18.89 7.78-5.52 5.18-8.93 12.63-10.25 22.34ZM107.25 4.65c14.12 6.58 20.23 23.36 13.65 37.48L55.79 181.71c-6.59 14.12-23.37 20.22-37.49 13.64-14.12-6.59-20.23-23.37-13.65-37.48l65.1-139.58C76.34 4.17 93.12-1.93 107.24 4.65m45.08 89.09c-14.12-6.58-30.91-.47-37.49 13.64l-23.55 50.48c-6.59 14.12-.48 30.9 13.65 37.48 14.12 6.58 30.91.47 37.49-13.64l23.55-50.49c6.59-14.12.47-30.9-13.65-37.48"
+  />
+</svg>
+
+
+
+      </a>
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/newsticker/it/"
+          class="navigation__head "
+          name="rubriknavi.ho.it"
+        >IT</a>
+      
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/newsticker/wissen/"
+          class="navigation__head "
+          name="rubriknavi.ho.wissen"
+        >Wissen</a>
+      
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/newsticker/mobiles/"
+          class="navigation__head "
+          name="rubriknavi.ho.mobiles"
+        >Mobiles</a>
+      
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/security/"
+          class="navigation__head "
+          name="rubriknavi.ho.security"
+        >Security</a>
+      
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/developer/"
+          class="navigation__head "
+          name="rubriknavi.ho.developer"
+        >Developer</a>
+      
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/newsticker/entertainment/"
+          class="navigation__head "
+          name="rubriknavi.ho.entertainment"
+        >Entertainment</a>
+      
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/newsticker/netzpolitik/"
+          class="navigation__head "
+          name="rubriknavi.ho.netzpolitik"
+        >Netzpolitik</a>
+      
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/newsticker/wirtschaft/"
+          class="navigation__head "
+          name="rubriknavi.ho.wirtschaft"
+        >Wirtschaft</a>
+      
+    </li>
+
+    
+    
+
+    
+
+    <li class="navigation__item ">
+        <a href="/newsticker/journal/"
+          class="navigation__head "
+          name="rubriknavi.ho.journal"
+        >Journal</a>
+      
+    </li>
+
+  
+  </ul>
+    <div class="navigation__list navigation__list--horizontal">
+
+      
+
+<a
+  
+  href="/newsticker/"
+  class="
+    link
+    navigation__item
+  "
+  name="header.ho.newstickerdropdown.siebentage"
+>
+
+    
+      <span
+      >
+        Newsticker
+      </span>
+</a>
+
+
+      
+
+<a
+  
+  href="/forum/"
+  class="
+    link
+    navigation__item navigation__head--active
+  "
+  name="header.ho.forum"
+>
+
+    
+      <span
+      >
+        Foren
+      </span>
+</a>
+
+
+    </div>
+</nav>
+
+
+            </div>
+
+            
+  <nav class="top-topics">
+    <div class="top-topics__section">
+
+      
+
+<ul class="topics top-topics__list"
+  
+>
+    <li class="topics__item top-topics__item">
+      <a
+        class="a-tag"
+        href="/thema/K%C3%BCnstliche-Intelligenz"
+        name="themen.ho.Künstliche Intelligenz 🤖"
+        title="News und Artikel zum Thema Künstliche Intelligenz 🤖"
+      >
+        Künstliche Intelligenz 🤖
+      </a>
+    </li>
+    <li class="topics__item top-topics__item">
+      <a
+        class="a-tag"
+        href="/thema/Windows"
+        name="themen.ho.Windows 🪟"
+        title="News und Artikel zum Thema Windows 🪟"
+      >
+        Windows 🪟
+      </a>
+    </li>
+    <li class="topics__item top-topics__item">
+      <a
+        class="a-tag"
+        href="/thema/Energie"
+        name="themen.ho.Energie 🔥"
+        title="News und Artikel zum Thema Energie 🔥"
+      >
+        Energie 🔥
+      </a>
+    </li>
+    <li class="topics__item top-topics__item">
+      <a
+        class="a-tag"
+        href="/thema/Digital-Health"
+        name="themen.ho.eHealth ⚕️"
+        title="News und Artikel zum Thema eHealth ⚕️"
+      >
+        eHealth ⚕️
+      </a>
+    </li>
+    <li class="topics__item top-topics__item">
+      <a
+        class="a-tag"
+        href="/thema/Raumfahrt"
+        name="themen.ho.Raumfahrt 🚀"
+        title="News und Artikel zum Thema Raumfahrt 🚀"
+      >
+        Raumfahrt 🚀
+      </a>
+    </li>
+    <li class="topics__item top-topics__item">
+      <a
+        class="a-tag"
+        href="/podcasts"
+        name="themen.ho.Podcasts 🎙"
+        title="News und Artikel zum Thema Podcasts 🎙"
+      >
+        Podcasts 🎙
+      </a>
+    </li>
+    <li class="topics__item top-topics__item">
+      <a
+        class="a-tag"
+        href="/download"
+        name="themen.ho.Downloads 💾"
+        title="News und Artikel zum Thema Downloads 💾"
+      >
+        Downloads 💾
+      </a>
+    </li>
+
+  
+  <!-- Alle Themen-Link soll erst nach Launch der Ziel-Seite ausgegeben werden
+    <li class="topics__item top-topics__item">
+      <a
+        class="topics__arrow-link"
+        href="/themen/"
+        name="themen.ho.allethemen"
+        title="Alle Themen"
+      >
+        Alle Themen
+        <svg class="topics__arrow">
+          <use href="/icons/common-icons.svg#arrow-right"></use>
+        </svg>
+      </a>
+    </li>
+  -->
+</ul>
+
+    </div>
+
+    
+
+  </nav>
+
+          </a-collapse-group>
+
+        
+      
+
+      
+
+
+
+<div
+  class="
+    notification-links
+    navigation__list navigation__list--horizontal a-u-hide-from-tablet
+  "
+>
+  
+
+<a
+  
+  href="/newsletter/"
+  class="
+    link
+    navigation__item notification-links__link
+  "
+  name="header.ho.newstickerdropdown.newsletter"
+  data-google-interstitial=false
+>
+      
+
+
+<svg
+  class="link__svg"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMinYMin"
+  viewBox="0 0 24 24">
+  <path id="paper-plane-outline" d="M24,3,0,10l7.92,4.4L8,20l3.78-3.46L18,20ZM17,17.34l-5.48-3L20.85,6.4ZM20.46,5.9,9.6,13.25,4.66,10.51Z" transform="translate(0)"/>
+</svg>
+
+
+
+    
+      <span
+      >
+        Newsletter
+      </span>
+</a>
+
+
+  
+
+<a
+  
+  href="/benachrichtigungen/heise-bot/"
+  class="
+    link
+    navigation__item notification-links__link
+  "
+  name="header.ho.newstickerdropdown.heisebotti"
+  data-google-interstitial=false
+>
+      
+
+
+
+
+<svg
+  id="logo-botti"
+  xmlns="http://www.w3.org/2000/svg"
+  class="link__svg"
+  viewBox="0 0 24 24"
+>
+  <title>heiseframe_title</title>
+  <path d="M9.3,17.66c-.24.56-.62,1.21-1.32,1.21A.89.89,0,0,1,7.05,18a3,3,0,0,1,.36-1.14l3.18-7.26c.24-.55.55-.95,1.18-.95a.86.86,0,0,1,.89.89A3.36,3.36,0,0,1,12.25,11Zm2.76,1.21c.71,0,1.08-.63,1.34-1.2L14.58,15A3.74,3.74,0,0,0,15,13.59a.86.86,0,0,0-.89-.89c-.64,0-.94.43-1.19,1l-1.42,3.2A2.65,2.65,0,0,0,11.16,18,.86.86,0,0,0,12.06,18.87ZM23.64,8.3a1,1,0,0,0-1.53,1.08A9.42,9.42,0,0,1,19,10.68c-.52-4.49-4.34-7.14-8.87-7.14A10.33,10.33,0,0,0,4.4,5.22,11.49,11.49,0,0,1,2.09,1.78,1,1,0,0,0,2.51.91,1,1,0,0,0,.56,1a1,1,0,0,0,1,.91,15.71,15.71,0,0,1,1,4.84,10.36,10.36,0,0,0-2.58,7c0,5.77,4.64,9.85,10.27,9.85a10.08,10.08,0,0,0,7.47-3.53l-.42-.63a7.92,7.92,0,0,1-1,.86,10.65,10.65,0,0,1-6.16,1.94A7.51,7.51,0,0,1,2.7,14.53c0-4.82,1.92-9.13,7.37-9.13,4.07,0,7.37,2.74,7.37,7a6.65,6.65,0,0,1-1.46,4l.72.62a7.79,7.79,0,0,0,2.23-3.91,16,16,0,0,1,3.51-3.27,1,1,0,0,0,1.35-.17A1,1,0,0,0,23.64,8.3ZM10.08,21c.39.09.18-.36.48-.56s.75-.39.81-.69a1.58,1.58,0,0,1-.93.05,6.43,6.43,0,0,1-1.27-.49,2,2,0,0,0,.15,1A1,1,0,0,0,10.08,21Z" transform="translate(0 0)"/>
+</svg>
+
+
+
+    
+      <span
+      >
+        heise-Bot
+      </span>
+</a>
+
+    
+
+<a
+  
+  href="/benachrichtigungen"
+  class="
+    link
+    navigation__item notification-links__link
+  "
+  name="header.ho.newstickerdropdown.pushnachrichten"
+  data-google-interstitial=false
+>
+      
+
+
+
+
+<svg
+  id="cp-bell-outline"
+  xmlns="http://www.w3.org/2000/svg"
+  class="link__svg"
+  viewBox="0 0 24 24"
+>
+  <title>heiseframe_title</title>
+  <path d="M15,20.9c0,1.6-1.3,2.9-3,3c-1.6-0.1-2.9-1.4-3-3h1.7c0,0,0,0,0,0.1c0,0.7,0.6,1.3,1.3,1.3 c0.7,0,1.3-0.6,1.3-1.3c0,0,0,0,0-0.1H15z M21.9,17.2v1.7H2.1v-1.7C6.9,15.6,4.2,6.7,8.9,4c0.6-0.4,1-1.1,1-1.8l0,0 c0-1,0.7-2,1.7-2.2C11.9,0,12.1,0,12.4,0c1,0.2,1.7,1.1,1.7,2.1l0,0c0,0.7,0.4,1.4,1,1.8C19.7,6.7,17.1,15.6,21.9,17.2z M19.2,16.9 c-4-2-1.4-9.6-5.8-12.2c-0.1-0.1-0.2-0.1-0.4-0.2c-0.3-0.2-0.6-0.3-1-0.3c-0.3,0-0.6,0.1-0.9,0.2c-0.2,0.1-0.3,0.1-0.5,0.2 C6.1,7.4,8.8,14.9,4.8,16.9H19.2z"/>
+</svg>
+
+
+
+    
+      <span class="a-u-hide-from-tablet">
+        Push
+      </span>
+      <span class="a-u-show-from-tablet">
+        Push-Nachrichten
+      </span>
+    
+</a>
+
+
+    
+    <a-color-scheme class="a-u-show-from-tablet a-cholor-scheme-tablet"></a-color-scheme>
+
+</div>
+
+
+      
+<nav class="sitemap sitemap-group--in-navigation" aria-label="Sitemap">
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        navigation__head
+      "
+      data-collapse-trigger
+    >
+      IT News
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--newsticker">
+            
+            
+            <a
+              href="/newsticker"
+              title="heise online - Newsticker"
+              name="header.ho.sitemap.newsticker"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Newsticker
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Hintergründe">
+            
+            
+            <a
+              href="/hintergrund"
+              title="heise online - Hintergründe"
+              name="header.ho.sitemap.Hintergründe"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Hintergründe
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Ratgeber">
+            
+            
+            <a
+              href="/ratgeber"
+              title="heise online - Ratgeber"
+              name="header.ho.sitemap.Ratgeber"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Ratgeber
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Tests">
+            
+            
+            <a
+              href="/tests"
+              title="heise online - Testberichte"
+              name="header.ho.sitemap.Tests"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Tests
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Meinung">
+            
+            
+            <a
+              href="/meinung"
+              title="heise online - Meinungen"
+              name="header.ho.sitemap.Meinung"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Meinungen
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        navigation__head
+      "
+      data-collapse-trigger
+    >
+      Online-Magazine
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--heiseplus">
+            
+            
+            <a
+              href="/plus/"
+              title="heise+ - Immer mehr Wissen."
+              name="header.ho.sitemap.heiseplus"
+              data-google-interstitial=false
+              class="sitemap-group__link sitemap-group__link--heiseplus"
+            >
+              heise<span class="sitemap_group__heiseplus-icon">+</span>
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tp">
+            
+            
+            <a
+              href="/tp/"
+              title="Telepolis"
+              name="header.ho.sitemap.tp"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Telepolis
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--autos">
+            
+            
+            <a
+              href="/autos/"
+              title="heise Autos – News, Tests, Technik, Service rund ums Auto"
+              name="header.ho.sitemap.autos"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Autos
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--techstage">
+            
+            
+            <a
+              href="https://www.techstage.de/"
+              title="TechStage – News, Tests &amp; Praxis zu Smartphones und Tablets mit Android, iOS, Windows Phone &amp; Co."
+              name="header.ho.sitemap.techstage"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              TechStage
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tipps-tricks">
+            
+            
+            <a
+              href="/tipps-tricks/"
+              title="tipps+tricks"
+              name="header.ho.sitemap.tipps-tricks"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              tipps+tricks
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse
+  class="sitemap-group sitemap-group--2-col"
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        navigation__head
+      "
+      data-collapse-trigger
+    >
+      Services
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--Shop">
+            
+            
+            <a
+              href="https://shop.heise.de/"
+              title="heise Shop – IT Fachzeitschriften, Bücher, CD/DVD/Blu-ray"
+              name="header.ho.sitemap.Shop"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Shop
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Arbeiten bei Heise">
+            
+            
+            <a
+              href="https://jobs.heise.de/"
+              title="heise jobs – Jobbörse für qualifizierte Fach- und Führungskräfte aus der IT-Branche"
+              name="header.ho.sitemap.Arbeiten bei Heise"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Stellenmarkt
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise academy">
+            
+            
+            <a
+              href="https://heise-academy.de/"
+              title="heise academy - Weiterbildung für IT-Profis von heise medien"
+              name="header.ho.sitemap.heise academy"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise academy
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--download">
+            
+            
+            <a
+              href="/download/"
+              title="heise Download – Software zum Download für Windows, Mac, Linux, iPhone, Symbian, Android"
+              name="header.ho.sitemap.download"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Download
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise preisvergleich">
+            
+            
+            <a
+              href="https://preisvergleich.heise.de"
+              title="heise preisvergleich – Günstige Preise, Meinungen und Bewertungen zu vielen Produkten"
+              name="header.ho.sitemap.heise preisvergleich"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise preisvergleich
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Tarifrechner">
+            
+            
+            <a
+              href="https://www.heise.de/tarifrechner"
+              title="Tarifrechner"
+              name="header.ho.sitemap.Tarifrechner"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Tarifrechner
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise compaliate">
+            
+            
+            <a
+              href="https://compaliate.heise.de/"
+              title="heise compaliate – Entdecke die heise Affiliate Plattform"
+              name="header.ho.sitemap.heise compaliate"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise compaliate
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Abo bestellen">
+            
+            
+            <a
+              href="https://shop.heise.de/zeitschriften-abo/"
+              title="Abo – c't, iX, c't Fotografie, Mac &amp; i, Make"
+              name="header.ho.sitemap.Abo bestellen"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Abo bestellen
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Mein Abo">
+            
+            
+            <a
+              href="https://www.heise.de/sso/registration/add_subscriber_id?forward=https%3A%2F%2Fwww.heise.de%2F"
+              title="Abo verwalten - Mein persönlicher Abo-Bereich"
+              name="header.ho.sitemap.Mein Abo"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Mein Abo
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Netzwerktools">
+            
+            
+            <a
+              href="https://www.heise.de/tools/"
+              title="heise online - Netzwerktools"
+              name="header.ho.sitemap.Netzwerktools"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Netzwerktools
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--iMonitor">
+            
+            
+            <a
+              href="https://www.heise.de/netze/netzwerk-tools/imonitor-internet-stoerungen/"
+              title="heise iMonitor"
+              name="header.ho.sitemap.iMonitor"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              iMonitor
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--loseblattwerke">
+            
+            
+            <a
+              href="/loseblattwerke/"
+              title="Loseblattwerke"
+              name="header.ho.sitemap.loseblattwerke"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Loseblattwerke
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--spiele">
+            
+            
+            <a
+              href="https://spiele.heise.de"
+              title="heise Spiele"
+              name="header.ho.sitemap.spiele"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Spiele
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        navigation__head
+      "
+      data-collapse-trigger
+    >
+      Über Uns
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--heise medien">
+            
+            
+            <a
+              href="https://www.heisegroup.de/artikel/heise-medien-3904998.html"
+              title="heise medien - Hochwertiger und unabhängiger Journalismus"
+              name="header.ho.sitemap.heise medien"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise medien
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise regioconcept">
+            
+            
+            <a
+              href="https://www.heise-regioconcept.de/"
+              title="heise regioconcept - Regionales Marketing für Unternehmen"
+              name="header.ho.sitemap.heise regioconcept"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise regioconcept
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise Business Services">
+            
+            
+            <a
+              href="https://business-services.heise.de/"
+              title="heise Business Services – Produkte und Lösungen namhafter IT-Hersteller"
+              name="header.ho.sitemap.heise Business Services"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Business Services
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--mediadaten">
+            
+            
+            <a
+              href="https://mediadaten.heise.de/"
+              title="Mediadaten heise medien"
+              name="header.ho.sitemap.mediadaten"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Mediadaten
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Karriere">
+            
+            
+            <a
+              href="https://www.heisegroup.de/artikel/heise-als-Arbeitgeber-1812545.html"
+              title="Arbeiten bei heise – Heise als Arbeitgeber"
+              name="header.ho.sitemap.Karriere"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Karriere
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--presse">
+            
+            
+            <a
+              href="https://www.heisegroup.de/presse/"
+              title="Pressemitteilungen und Interviews"
+              name="header.ho.sitemap.presse"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Presse
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+</nav>
+
+      <div class="header__login">
+        <svg class="header__login-icon">
+          <use href="/icons/common-icons.svg#login"></use>
+        </svg>
+        <a-login label="" class="header__login-link"></a-login>
+      </div>
+
+    
+        <a-color-scheme class="a-u-hide-from-tablet a-cholor-scheme-mobile"></a-color-scheme>
+      
+    </div>
+  </a-collapse>
+    
+
+
+</header>
+
+
+            
+          </div>
+        </div>
+
+        <script>
+          performance.mark('HEADER Ende');
+          performance.measure('HEADER', 'HEADER Anfang', 'HEADER Ende');
+        </script>
+
+      
+
+        
+          <div class="a-layout__container a-layout__container--full-width">
+            <div class="a-layout__item a-layout__item--full-width">
+              
+
+
+
+  
+    
+      <div
+        id="HEI_D_Stage-label"
+        style="display: none;"
+        class="ad-label"
+      >Anzeige</div>
+    
+    <div
+      id="HEI_D_Stage"
+      
+      class="ad ad--stage"
+    ></div>
+  
+
+
+            </div>
+          </div>
+        <div
+          class="
+            a-layout__container"
+        >
+            <div
+              class="
+                  a-layout__item
+              "
+            >
+          
+            <script>performance.mark('CONTENT Anfang');</script>
+            
+
+
+
+
+
+
+
+
+<div id="forum_wrap" class="clearfix
+threadbeitraege_show_baum
+">
+
+
+
+  
+
+  
+
+  <div id="notification_area">
+
+
+
+</div>
+
+<script type="text/javascript">
+
+
+
+function notify(type, message) {
+    jQuery('<p class="notify" style="display: none;"></p>').appendTo('#notification_area');
+    jQuery("p.notify").addClass(type);
+    jQuery(".notify").html(message);
+    make_notify_sticky();
+}
+
+function show_notify(data) {
+    notify(data.type, data.message);
+    if (data.backtrace) {
+        console.log(data.backtrace);
+    }
+}
+var orig_topnav_zindex = null;
+function make_notify_sticky() {
+    if ( orig_topnav_zindex === null ) {
+        orig_topnav_zindex = jQuery('.heisetopnavi nav').css('z-index');
+    }
+    jQuery('.heisetopnavi nav').css('z-index', '1');
+    jQuery('.notify').click( hide_notify );
+    
+    setTimeout( hide_notify, 2500 );
+    
+
+    jQuery(".notify").fadeIn('fast');
+};
+
+function hide_notify() {
+    jQuery('.notify').fadeOut('slow', function() {
+        jQuery('.notify').replaceWith();
+        jQuery('.heisetopnavi nav').css('z-index', orig_topnav_zindex);
+    } );
+}
+
+
+
+
+jQuery(document).on('click', 'p.notify', function () {
+   hide_notify();
+});
+
+
+
+jQuery(document).on('ready', function() {
+   setTimeout( function() {
+     hide_notify();
+   }, 3500 );
+});
+
+
+</script>
+
+
+  <div id="forum_variables"
+       data-runmode="posting_show"
+       data-current-time="2024-08-07T11:35:51"
+       data-baseurl="/forum"
+       
+           data-mail-on-reply-url="/forum/ajax/mail-on-reply-status/"
+           data-mail-on-reply-active="Sie werden über Antworten auf diesen Beitrag per Mail benachrichtigt."
+           data-mail-on-reply-inactive="Sie erhalten keine Benachrichtigung von uns über Antworten auf diesen Beitrag."
+       
+       data-enable-rating="1"
+  >
+  </div>
+
+  <header class="forum_header clearfix">
+    <div class="wrapper">
+      
+      <span class="forum_headline" >
+            
+
+            
+
+            
+
+            
+
+            
+                <a href="https://www.heise.de/news/Mobile-Device-Management-Einbrecher-bei-Mobile-Guardian-loeschen-tausende-Geraete-9826415.html">Einbrecher löschen tausende Geräte beim MDM-Anbieter Mobile Guardian</a>
+            
+      </span>
+      
+
+
+
+
+
+
+  
+
+    <div vocab="https://schema.org/" typeof="BreadcrumbList" class="forum_breadcrumb">
+            
+            <span property="itemListElement" typeof="ListItem" class="breadcrumb_element">
+                    <a href="https://www.heise.de/forum/startseite/" property="item" typeof="WebPage">
+                <span property="name">Alle Heise-Foren</span>
+                    </a> &gt;
+                <meta property="position" content="1">
+            </span>
+            
+                <span>
+            <span property="itemListElement" typeof="ListItem" class="breadcrumb_element">
+                    <a href="https://www.heise.de/forum/heise-online/forum-20483/" property="item" typeof="WebPage">
+                <span property="name">heise online</span>
+                    </a> &gt;
+                <meta property="position" content="2">
+            </span>
+                </span>
+            
+                <span>
+            <span property="itemListElement" typeof="ListItem" class="breadcrumb_element">
+                    <a href="https://www.heise.de/forum/heise-online/Kommentare/forum-417093/" property="item" typeof="WebPage">
+                <span property="name">Kommentare</span>
+                    </a> &gt;
+                <meta property="position" content="3">
+            </span>
+                </span>
+            
+                <span>
+            <span property="itemListElement" typeof="ListItem" class="breadcrumb_element">
+                    <a href="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/forum-545206/" property="item" typeof="WebPage">
+                <span property="name">Einbrecher löschen tausende G…</span>
+                    </a> &gt;
+                <meta property="position" content="4">
+            </span>
+                </span>
+            
+                <span>
+            <span property="itemListElement" typeof="ListItem" class="breadcrumb_element">
+                <span property="name">Heise-Forum als Command and C…</span>
+                <meta property="position" content="5">
+            </span>
+                </span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <form
+      accept-charset="utf-8"
+      method="get"
+      action="/forum/suche/"
+      class="forum-search"
+      role="search"
+    >
+      <input
+        type="search"
+        class="forum-search__input"
+        value=""
+        name="q"
+        placeholder="Im Forum suchen"
+        spellcheck="false"
+        data-searchpath="/forum/suche/"
+        aria-label="Im Forum suchen"
+      >
+
+      
+        <input type="hidden" name="forum" value="545206" />
+      
+
+      <input
+        type="hidden"
+        name="sort_by"
+        value="date"
+      >
+      <button
+        class="forum-search__button"
+        type="submit"
+        aria-label="suchen"
+      >
+        <svg class="forum-search__search-icon">
+          <use href="/icons/common-icons.svg#search"></use>
+        </svg>
+      </button>
+      <input
+        type="hidden"
+        value="search"
+        name="rm"
+      >
+    </form>
+
+  </header>
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+<section class="metaline clearfix">
+
+    
+        <nav class="posting_navi">
+          <ul>
+            
+              
+              
+<li>
+    <!-- ttt1 2024-08-07T11:35:51 -->
+    <ul class="clearfix beitrags_navigation">
+	
+	    <li class="prev">
+	    	<a href="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Re-Zentralisierung-ist-sehr-praktisch/posting-44292122/show/" class="arrow_container prev_posting" title="Voriges Posting: Tastatur-Shortcut A">
+                   &#xf0d9;
+	    	</a>
+	    </li>
+	
+	<li class="posting">
+	    Beitrag
+	</li>
+	
+	    <li class="next">
+	    	<a href="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Re-Zentralisierung-ist-sehr-praktisch/posting-44292503/show/" class="arrow_container next_posting" title="Nächstes Posting: Tastatur-Shortcut D">
+                  &#xf0da;
+                </a>
+	    </li>
+	
+    </ul>
+</li>
+
+
+              
+
+            
+            <li>
+    <!-- ttt2 2024-08-07T11:35:51 -->
+
+    
+    <ul class="clearfix thread_navigation">
+        
+            <li class="next ie8_margin_left_50px">
+                
+                    <a href="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/ob-das-ein-Schueler-war/posting-44291737/show/" class="arrow_container next_thread" title="Voriger Thread: Tastatur-Shortcut W">
+                      &#xf0d9;
+                    </a>
+                
+            </li>
+        
+
+        <li class="posting">
+            <a href="https://www.heise.de/forum/thread-in-forum/7624000/"> Threads</a>
+        </li>
+
+        
+            <li class="prev inactive_border">
+                <span class="arrow_container">
+                    &#xf0da;
+                </span>
+            </li>
+        
+    </ul>
+</li>
+
+            
+
+            </ul>
+        </nav>
+
+        
+          
+<ul class="buttonline">
+    
+
+    
+        
+          
+            <li>
+              <button onclick="location.href='/sso/login/?forward=https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Heise-Forum-als-Command-and-Control-Server-Funktioniert/posting-44292822/show/'" class="login_button" title="Zum Login/zur Registrierung">
+                Anmelden und mitdiskutieren
+              </button>
+            </li>
+          
+        
+    
+    
+
+
+    
+
+        
+
+        
+        
+        
+        
+
+        
+          
+
+        
+
+    
+
+    
+</ul>
+
+
+
+        
+    
+
+    
+
+
+    <div class="meta_line_right">
+
+      <button href="/forum/_9eqC6GMoUlJlOa4IGJ0mpjKaCF53gah9/user/toggle-rating/" class="toggle_rating thread_button toggle_rating--deactivate" title="Bewertung ausblenden">
+        aus
+      </button>
+
+      <button href="/forum/_9eqC6GMoUlJlOa4IGJ0mpjKaCF53gah9/user/toggle-rating/" class="toggle_rating thread_button toggle_rating--activate" title="Bewertung einblenden">
+        ein
+      </button>
+
+      
+
+      <div class="tree_mode_switch">
+          
+              <span class="smallnote">Ansicht umschalten</span>
+          
+          <button onclick="location.href='/forum/tree-mode-toggle/r-eNodTctqw0AM_BffFYHJIc2t5AnFp37Bup7GImvJaOX6EPLv3eQwMDPM49F4s2_GiLnsmdd13YyQgs0A_jVfJn5LMs2i4C-bJmgkB59Ee8fPCKdsKJUoRVoKdABd4AkB6iETdceOPrWXajh11kuugSX5IEn5-p4_v64o5UKH-pB0oBcOpuGW6Rv-V6vnRe8hpgIPnq2E6I222_aj3bUtl9FWbp7__upLQwe7d323/'" class="tree_mode_on" title="Ansicht auf flache Struktur umschalten">
+          Baum an
+          </button>
+      </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<div id="thread" class="single_posting">
+
+    <div id="posting_44292822" class="first_posting" data-posting-version="7230279310006" data-alt-history="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Re-Zentralisierung-ist-sehr-praktisch/posting-44292822/show/">
+        
+        
+	    
+        
+
+
+    <!--Die Buttons werden immer nur im ersten Beitrag angezeigt und beziehen sich auch auf den ersten Beitrag--><div class="userbar clearfix" data-user-id="1682">
+
+      <img src="/foto/icons/galerie/avatar_48.png" alt="Avatar von Valentin Hilbig" />
+
+
+    
+
+    <ul class="author forum_userbar--author userbar_list">
+        
+
+        
+         <li><span class="full_user_string"><span class="realname">Valentin Hilbig</span></span></li>
+        
+    </ul>
+
+  
+  
+  <p>
+
+      
+
+      
+          mehr als 1000 Beiträge seit 08.01.2000
+      
+
+      
+
+  </p>
+  
+
+  <div class="user_interaction">
+
+      
+  </div>
+</div>
+
+<div class="metabar">
+   <time class="posting_timestamp" title="07.08.2024 12:52" data-mysql-beautify-date="2024-08-07T10:52:10">
+        07.08.2024 12:52
+    </time>
+
+    <ul>                
+
+            <li>
+                <a href="https://www.heise.de/forum/p-44292822/" class="perma" rel="nofollow">
+                
+                    Permalink
+                
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.heise.de/forum/posting-44292822/feedback-links/" class="feedback" rel="nofollow">
+                    Melden
+                </a>
+            </li>
+
+            
+        
+     </ul>
+</div>
+
+
+
+            <!--googleon: index-->
+            <h1 class="thread_title">
+                
+                <a href="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Heise-Forum-als-Command-and-Control-Server-Funktioniert/posting-44292822/show/">
+                    Heise-Forum als Command and Control Server: Funktioniert!
+
+                </a>
+                
+
+                
+
+            </h1>
+            <!--googleoff: index-->
+
+    <div class="post">
+
+        
+        
+                    
+            <!--googleon: index-->            <div class="body_format_indicator bbcode_v1">
+
+
+                        
+
+                        
+                          <p>Es ist überhaupt kein Problem, das Heise-Forum als Command and Control-Server zu verwandeln!  </p><p>Siehe auch <a href="https://www.heise.de/forum/heise-online/Kommentare/Malware-Verteilung-ueber-GitHub-Geister-Account-Netzwerk-entdeckt/Gewinnspiel-Wer-findet-die-geheime-Botschaft-in-diesem-Text-von-mir/posting-44247573/show/">https://www.heise.de/forum/heise-online/Kommentare/Malware-Verteilung-ueber-GitHub-Geister-Account-Netzwerk-entdeckt/Gewinnspiel-Wer-findet-die-geheime-Botschaft-in-diesem-Text-von-mir/posting-44247573/show/</a></p><p>Einfach eine entsprechende Nachricht hier kodieren, und profit! </p><p>Hier in diese Nachricht habe ich z.B. mit derselben Methode den komplementären Befehl zu meiner oben zitierten Nachricht kodiert.  </p><p>Na?  Findet jetzt jemand, wie es geht?  </p><p>-Tino<br />PS: Hinweis: Nach dem Posten überprüfe ich, ob es immer noch klappt.</p>
+                        
+
+            </div>
+            <!--googleoff: index-->
+                <p class="posting_edit">Das Posting wurde vom Benutzer editiert (07.08.2024 13:35).</p>
+
+            
+        
+
+        
+
+        <div class="posting_options_wrapper"> 
+
+        <div class="posting_options clearfix">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+    
+<div class="rating_buttons_wrapper">
+  <span class="smallnote">Bewerten</span>
+	<div class="rating_buttons">
+    <span class="rating_post negative" title="Bitte loggen Sie sich ein, um den Beitrag zu bewerten.">-</span>
+    <span class="rating_post positive" title="Bitte loggen Sie sich ein, um den Beitrag zu bewerten.">+</span>
+	</div>
+</div>
+
+</div>
+
+
+
+  <div class="thread_view_switch">
+      
+        <a href="/forum/show-thread-below-posting/r-eNodTctqw0AM_BffFYHJIc2t5AnFp37Bup7GImvJaOX6EPLv3eQwMDPM49F4s2_GiLnsmdd13YyQgs0A_jVfJn5LMs2i4C-bJmgkB59Ee8fPCKdsKJUoRVoKdABd4AkB6iETdceOPrWXajh11kuugSX5IEn5-p4_v64o5UKH-pB0oBcOpuGW6Rv-V6vnRe8hpgIPnq2E6I222_aj3bUtl9FWbp7__upLQwe7d323/">Thread-Anzeige einblenden</a>
+      
+  </div>
+
+  
+
+<div class="metaline_under_list">
+
+  
+<section class="metaline clearfix">
+
+    
+        <nav class="posting_navi">
+          <ul>
+            
+              
+              
+<li>
+    <!-- ttt1 2024-08-07T11:35:51 -->
+    <ul class="clearfix beitrags_navigation">
+	
+	    <li class="prev">
+	    	<a href="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Re-Zentralisierung-ist-sehr-praktisch/posting-44292122/show/" class="arrow_container prev_posting" title="Voriges Posting: Tastatur-Shortcut A">
+                   &#xf0d9;
+	    	</a>
+	    </li>
+	
+	<li class="posting">
+	    Beitrag
+	</li>
+	
+	    <li class="next">
+	    	<a href="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Re-Zentralisierung-ist-sehr-praktisch/posting-44292503/show/" class="arrow_container next_posting" title="Nächstes Posting: Tastatur-Shortcut D">
+                  &#xf0da;
+                </a>
+	    </li>
+	
+    </ul>
+</li>
+
+
+              
+
+            
+            <li>
+    <!-- ttt2 2024-08-07T11:35:51 -->
+
+    
+    <ul class="clearfix thread_navigation">
+        
+            <li class="next ie8_margin_left_50px">
+                
+                    <a href="https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/ob-das-ein-Schueler-war/posting-44291737/show/" class="arrow_container next_thread" title="Voriger Thread: Tastatur-Shortcut W">
+                      &#xf0d9;
+                    </a>
+                
+            </li>
+        
+
+        <li class="posting">
+            <a href="https://www.heise.de/forum/thread-in-forum/7624000/"> Threads</a>
+        </li>
+
+        
+            <li class="prev inactive_border">
+                <span class="arrow_container">
+                    &#xf0da;
+                </span>
+            </li>
+        
+    </ul>
+</li>
+
+            
+
+            </ul>
+        </nav>
+
+        
+          
+<ul class="buttonline">
+    
+
+    
+        
+          
+            <li>
+              <button onclick="location.href='/sso/login/?forward=https://www.heise.de/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Heise-Forum-als-Command-and-Control-Server-Funktioniert/posting-44292822/show/'" class="login_button" title="Zum Login/zur Registrierung">
+                Anmelden und mitdiskutieren
+              </button>
+            </li>
+          
+        
+    
+    
+
+
+    
+
+        
+
+        
+        
+        
+        
+
+        
+          
+
+        
+
+    
+
+    
+</ul>
+
+
+
+        
+    
+
+    
+
+
+    <div class="meta_line_right">
+
+      <button href="/forum/_9eqC6GMoUlJlOa4IGJ0mpjKaCF53gah9/user/toggle-rating/" class="toggle_rating thread_button toggle_rating--deactivate" title="Bewertung ausblenden">
+        aus
+      </button>
+
+      <button href="/forum/_9eqC6GMoUlJlOa4IGJ0mpjKaCF53gah9/user/toggle-rating/" class="toggle_rating thread_button toggle_rating--activate" title="Bewertung einblenden">
+        ein
+      </button>
+
+      
+
+      <div class="tree_mode_switch">
+          
+              <span class="smallnote">Ansicht umschalten</span>
+          
+          <button onclick="location.href='/forum/tree-mode-toggle/r-eNodTctqw0AM_BffFYHJIc2t5AnFp37Bup7GImvJaOX6EPLv3eQwMDPM49F4s2_GiLnsmdd13YyQgs0A_jVfJn5LMs2i4C-bJmgkB59Ee8fPCKdsKJUoRVoKdABd4AkB6iETdceOPrWXajh11kuugSX5IEn5-p4_v64o5UKH-pB0oBcOpuGW6Rv-V6vnRe8hpgIPnq2E6I222_aj3bUtl9FWbp7__upLQwe7d323/'" class="tree_mode_on" title="Ansicht auf flache Struktur umschalten">
+          Baum an
+          </button>
+      </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+</div>
+
+<div class="terms">
+  <a href="/sso/registration/account/terms">Nutzungsbedingungen</a>
+</div>
+
+
+</div>
+<script type="text/javascript" src="/js/plugins/jquery_fieldselection.js"></script>
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function errorAnzeige(code,msg){
+    notify('error','AJAX-Fehler ('+code+' '+msg+')');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready( function() {    $('.metabar .feedback').css('display','inline'); 
+    $('.metabar .feedback').on('click',function(event){
+        event.preventDefault();
+
+        // 
+        if ($('.metabar .feedback_options span').size() > 0) {
+            $('span.feedback_options').animate({ opacity: '.0' }, 200, function(){
+                $(this).remove();
+            });
+            return;
+        }
+
+        var id = $(this).parents('[id*="posting_"]').attr('id');
+
+        $.getJSON(event.target.href,{ ajax: 1 },function(data, status, xhr){            if(xhr.status == 200){
+                $('#'+id+' .metabar').prepend('<span class="feedback_options"><span>x</span></span>');
+                data.map((item) => {
+                    $('span.feedback_options').append('<a href="'+item.href+'">'+item.name+'</a>');
+                });
+                $('#'+id+' .metabar .feedback_options').animate({ opacity: 1 }, 200);
+            }
+            else{
+                errorAnzeige(xhr.status,xhr.statusText);
+            }
+        });
+    });
+
+    $(document).on('click', '.metabar .feedback_options span', function(){
+        $(this).parent().animate({ opacity: '.0' }, 200, function(){
+            $(this).remove();
+        });
+    });
+});
+
+
+
+/* ]]> */
+</script>
+<script type="text/javascript" src="/js/forum/forum.min.js?.ltc.b52c76c3d2c13acb92a3" async></script>
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+              performance.mark('CONTENT Ende');
+              performance.measure('CONTENT', 'CONTENT Anfang', 'CONTENT Ende');
+            </script>
+          
+            </div>
+        </div>
+          
+
+      
+      </div>
+      
+
+      
+
+      
+        <div id="article-page-upscore" class="a-layout" data-include-in-outbrain-smart-feed-upscore></div>
+      
+
+      
+        <div class="a-layout a-layout--bg-grey">
+          <div class="a-layout__container">
+            <div class="a-layout__item">
+              
+
+
+
+  
+    
+      <div
+        id="HEI_D_Footer-label"
+        style="display: none;"
+        class="ad-label"
+      >Anzeige</div>
+    
+    <div
+      id="HEI_D_Footer"
+      
+      class="ad ad--footer"
+    ></div>
+  
+
+
+              
+
+
+
+  
+    
+      <div
+        id="HEI_M_Footer-label"
+        style="display: none;"
+        class="ad-label"
+      >Anzeige</div>
+    
+    <div
+      id="HEI_M_Footer"
+      
+      class="ad"
+    ></div>
+  
+
+
+            </div>
+          </div>
+        </div>
+      
+
+      <div class="a-layout">
+        <div data-append-outbrain class="a-layout__container"></div>
+      </div>
+
+       <div class="a-layout a-layout--transparent">
+        <div class="a-layout__container">
+          <div class="a-layout__item">
+            <div class="bottom_up">
+              <!-- RSPEAK_STOP -->
+              <a href="#bottom-up" class="a-button" name="ticker.ho.bottom.up">
+              <span class="arrow"></span>nach oben</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="a-layout a-u-no-margin-bottom">
+        <div
+          class=" a-layout__container a-layout__container--full-width"
+        >
+          <div class="a-layout__item a-layout__item--full-width">
+
+              <div class="nav-bottom">
+
+  <a-collapse
+    class="sitemap-group nav-bottom__collapse-trigger"
+    has-indicator
+    media="(max-width: 929px)"
+    toggle-attr-on-media="disabled"
+  >
+    <header
+      class="nav-bottom__collapse-toggle a-u-grid-pushin-mobile"
+      data-collapse-trigger>
+      Alle Angebote
+    </header>
+
+    <div data-collapse-target class="nav-bottom__content">
+
+      
+
+      
+<nav class="sitemap nav-bottom__sitemap" aria-label="Sitemap">
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        a-u-grid-pushin-mobile
+      "
+      data-collapse-trigger
+    >
+      IT News
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--newsticker">
+            
+            
+            <a
+              href="/newsticker"
+              title="heise online - Newsticker"
+              name="footer.ho.sitemap.newsticker"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Newsticker
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Hintergründe">
+            
+            
+            <a
+              href="/hintergrund"
+              title="heise online - Hintergründe"
+              name="footer.ho.sitemap.Hintergründe"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Hintergründe
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Ratgeber">
+            
+            
+            <a
+              href="/ratgeber"
+              title="heise online - Ratgeber"
+              name="footer.ho.sitemap.Ratgeber"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Ratgeber
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Tests">
+            
+            
+            <a
+              href="/tests"
+              title="heise online - Testberichte"
+              name="footer.ho.sitemap.Tests"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Tests
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Meinung">
+            
+            
+            <a
+              href="/meinung"
+              title="heise online - Meinungen"
+              name="footer.ho.sitemap.Meinung"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Meinungen
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        a-u-grid-pushin-mobile
+      "
+      data-collapse-trigger
+    >
+      Online-Magazine
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--heiseplus">
+            
+            
+            <a
+              href="/plus/"
+              title="heise+ - Immer mehr Wissen."
+              name="footer.ho.sitemap.heiseplus"
+              data-google-interstitial=false
+              class="sitemap-group__link sitemap-group__link--heiseplus"
+            >
+              heise<span class="sitemap_group__heiseplus-icon">+</span>
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tp">
+            
+            
+            <a
+              href="/tp/"
+              title="Telepolis"
+              name="footer.ho.sitemap.tp"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Telepolis
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--autos">
+            
+            
+            <a
+              href="/autos/"
+              title="heise Autos – News, Tests, Technik, Service rund ums Auto"
+              name="footer.ho.sitemap.autos"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Autos
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--techstage">
+            
+            
+            <a
+              href="https://www.techstage.de/"
+              title="TechStage – News, Tests &amp; Praxis zu Smartphones und Tablets mit Android, iOS, Windows Phone &amp; Co."
+              name="footer.ho.sitemap.techstage"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              TechStage
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tipps-tricks">
+            
+            
+            <a
+              href="/tipps-tricks/"
+              title="tipps+tricks"
+              name="footer.ho.sitemap.tipps-tricks"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              tipps+tricks
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse
+  class="sitemap-group sitemap-group--2-col"
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        a-u-grid-pushin-mobile
+      "
+      data-collapse-trigger
+    >
+      Services
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--Shop">
+            
+            
+            <a
+              href="https://shop.heise.de/"
+              title="heise Shop – IT Fachzeitschriften, Bücher, CD/DVD/Blu-ray"
+              name="footer.ho.sitemap.Shop"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Shop
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Arbeiten bei Heise">
+            
+            
+            <a
+              href="https://jobs.heise.de/"
+              title="heise jobs – Jobbörse für qualifizierte Fach- und Führungskräfte aus der IT-Branche"
+              name="footer.ho.sitemap.Arbeiten bei Heise"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Stellenmarkt
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise academy">
+            
+            
+            <a
+              href="https://heise-academy.de/"
+              title="heise academy - Weiterbildung für IT-Profis von heise medien"
+              name="footer.ho.sitemap.heise academy"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise academy
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--download">
+            
+            
+            <a
+              href="/download/"
+              title="heise Download – Software zum Download für Windows, Mac, Linux, iPhone, Symbian, Android"
+              name="footer.ho.sitemap.download"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Download
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise preisvergleich">
+            
+            
+            <a
+              href="https://preisvergleich.heise.de"
+              title="heise preisvergleich – Günstige Preise, Meinungen und Bewertungen zu vielen Produkten"
+              name="footer.ho.sitemap.heise preisvergleich"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise preisvergleich
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Tarifrechner">
+            
+            
+            <a
+              href="https://www.heise.de/tarifrechner"
+              title="Tarifrechner"
+              name="footer.ho.sitemap.Tarifrechner"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Tarifrechner
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise compaliate">
+            
+            
+            <a
+              href="https://compaliate.heise.de/"
+              title="heise compaliate – Entdecke die heise Affiliate Plattform"
+              name="footer.ho.sitemap.heise compaliate"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise compaliate
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Abo bestellen">
+            
+            
+            <a
+              href="https://shop.heise.de/zeitschriften-abo/"
+              title="Abo – c't, iX, c't Fotografie, Mac &amp; i, Make"
+              name="footer.ho.sitemap.Abo bestellen"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Abo bestellen
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Mein Abo">
+            
+            
+            <a
+              href="https://www.heise.de/sso/registration/add_subscriber_id?forward=https%3A%2F%2Fwww.heise.de%2F"
+              title="Abo verwalten - Mein persönlicher Abo-Bereich"
+              name="footer.ho.sitemap.Mein Abo"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Mein Abo
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Netzwerktools">
+            
+            
+            <a
+              href="https://www.heise.de/tools/"
+              title="heise online - Netzwerktools"
+              name="footer.ho.sitemap.Netzwerktools"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Netzwerktools
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--iMonitor">
+            
+            
+            <a
+              href="https://www.heise.de/netze/netzwerk-tools/imonitor-internet-stoerungen/"
+              title="heise iMonitor"
+              name="footer.ho.sitemap.iMonitor"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              iMonitor
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--loseblattwerke">
+            
+            
+            <a
+              href="/loseblattwerke/"
+              title="Loseblattwerke"
+              name="footer.ho.sitemap.loseblattwerke"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Loseblattwerke
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--spiele">
+            
+            
+            <a
+              href="https://spiele.heise.de"
+              title="heise Spiele"
+              name="footer.ho.sitemap.spiele"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Spiele
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+
+
+  
+
+<a-collapse
+  class="sitemap-group "
+  has-indicator
+  media="(max-width: 929px)"
+  toggle-attr-on-media="disabled"
+>
+    
+    <div
+      class="
+        sitemap-group__header
+        a-u-grid-pushin-mobile
+      "
+      data-collapse-trigger
+    >
+      Über Uns
+    </div>
+    
+
+    <div class="sitemap-group__content" data-collapse-target >
+      <ul class="sitemap-group__items ">
+        
+          <li class="sitemap-group__item sitemap-group__item--heise medien">
+            
+            
+            <a
+              href="https://www.heisegroup.de/artikel/heise-medien-3904998.html"
+              title="heise medien - Hochwertiger und unabhängiger Journalismus"
+              name="footer.ho.sitemap.heise medien"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise medien
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise regioconcept">
+            
+            
+            <a
+              href="https://www.heise-regioconcept.de/"
+              title="heise regioconcept - Regionales Marketing für Unternehmen"
+              name="footer.ho.sitemap.heise regioconcept"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise regioconcept
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--heise Business Services">
+            
+            
+            <a
+              href="https://business-services.heise.de/"
+              title="heise Business Services – Produkte und Lösungen namhafter IT-Hersteller"
+              name="footer.ho.sitemap.heise Business Services"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              heise Business Services
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--mediadaten">
+            
+            
+            <a
+              href="https://mediadaten.heise.de/"
+              title="Mediadaten heise medien"
+              name="footer.ho.sitemap.mediadaten"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Mediadaten
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--Karriere">
+            
+            
+            <a
+              href="https://www.heisegroup.de/artikel/heise-als-Arbeitgeber-1812545.html"
+              title="Arbeiten bei heise – Heise als Arbeitgeber"
+              name="footer.ho.sitemap.Karriere"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Karriere
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--presse">
+            
+            
+            <a
+              href="https://www.heisegroup.de/presse/"
+              title="Pressemitteilungen und Interviews"
+              name="footer.ho.sitemap.presse"
+              data-google-interstitial=false
+              class="sitemap-group__link "
+            >
+              Presse
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+</nav>
+
+
+      
+
+
+
+<div
+  class="
+    notification-links
+    nav-bottom__notification-links a-u-grid-pushin-mobile
+  "
+>
+  
+
+<a
+  
+  href="/newsletter/"
+  class="
+    link
+    notification-links__link
+  "
+  name="footer.ho.sitemap.newsletter"
+  data-google-interstitial=false
+>
+      
+
+
+<svg
+  class="link__svg"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMinYMin"
+  viewBox="0 0 24 24">
+  <path id="paper-plane-outline" d="M24,3,0,10l7.92,4.4L8,20l3.78-3.46L18,20ZM17,17.34l-5.48-3L20.85,6.4ZM20.46,5.9,9.6,13.25,4.66,10.51Z" transform="translate(0)"/>
+</svg>
+
+
+
+    
+      <span
+      >
+        Newsletter
+      </span>
+</a>
+
+
+  
+
+<a
+  
+  href="/benachrichtigungen/heise-bot/"
+  class="
+    link
+    notification-links__link
+  "
+  name="footer.ho.sitemap.heisebotti"
+  data-google-interstitial=false
+>
+      
+
+
+
+
+<svg
+  id="logo-botti"
+  xmlns="http://www.w3.org/2000/svg"
+  class="link__svg"
+  viewBox="0 0 24 24"
+>
+  <title>heiseframe_title</title>
+  <path d="M9.3,17.66c-.24.56-.62,1.21-1.32,1.21A.89.89,0,0,1,7.05,18a3,3,0,0,1,.36-1.14l3.18-7.26c.24-.55.55-.95,1.18-.95a.86.86,0,0,1,.89.89A3.36,3.36,0,0,1,12.25,11Zm2.76,1.21c.71,0,1.08-.63,1.34-1.2L14.58,15A3.74,3.74,0,0,0,15,13.59a.86.86,0,0,0-.89-.89c-.64,0-.94.43-1.19,1l-1.42,3.2A2.65,2.65,0,0,0,11.16,18,.86.86,0,0,0,12.06,18.87ZM23.64,8.3a1,1,0,0,0-1.53,1.08A9.42,9.42,0,0,1,19,10.68c-.52-4.49-4.34-7.14-8.87-7.14A10.33,10.33,0,0,0,4.4,5.22,11.49,11.49,0,0,1,2.09,1.78,1,1,0,0,0,2.51.91,1,1,0,0,0,.56,1a1,1,0,0,0,1,.91,15.71,15.71,0,0,1,1,4.84,10.36,10.36,0,0,0-2.58,7c0,5.77,4.64,9.85,10.27,9.85a10.08,10.08,0,0,0,7.47-3.53l-.42-.63a7.92,7.92,0,0,1-1,.86,10.65,10.65,0,0,1-6.16,1.94A7.51,7.51,0,0,1,2.7,14.53c0-4.82,1.92-9.13,7.37-9.13,4.07,0,7.37,2.74,7.37,7a6.65,6.65,0,0,1-1.46,4l.72.62a7.79,7.79,0,0,0,2.23-3.91,16,16,0,0,1,3.51-3.27,1,1,0,0,0,1.35-.17A1,1,0,0,0,23.64,8.3ZM10.08,21c.39.09.18-.36.48-.56s.75-.39.81-.69a1.58,1.58,0,0,1-.93.05,6.43,6.43,0,0,1-1.27-.49,2,2,0,0,0,.15,1A1,1,0,0,0,10.08,21Z" transform="translate(0 0)"/>
+</svg>
+
+
+
+    
+      <span
+      >
+        heise-Bot
+      </span>
+</a>
+
+    
+
+<a
+  
+  href="/benachrichtigungen"
+  class="
+    link
+    notification-links__link
+  "
+  name="footer.ho.sitemap.pushnachrichten"
+  data-google-interstitial=false
+>
+      
+
+
+
+
+<svg
+  id="cp-bell-outline"
+  xmlns="http://www.w3.org/2000/svg"
+  class="link__svg"
+  viewBox="0 0 24 24"
+>
+  <title>heiseframe_title</title>
+  <path d="M15,20.9c0,1.6-1.3,2.9-3,3c-1.6-0.1-2.9-1.4-3-3h1.7c0,0,0,0,0,0.1c0,0.7,0.6,1.3,1.3,1.3 c0.7,0,1.3-0.6,1.3-1.3c0,0,0,0,0-0.1H15z M21.9,17.2v1.7H2.1v-1.7C6.9,15.6,4.2,6.7,8.9,4c0.6-0.4,1-1.1,1-1.8l0,0 c0-1,0.7-2,1.7-2.2C11.9,0,12.1,0,12.4,0c1,0.2,1.7,1.1,1.7,2.1l0,0c0,0.7,0.4,1.4,1,1.8C19.7,6.7,17.1,15.6,21.9,17.2z M19.2,16.9 c-4-2-1.4-9.6-5.8-12.2c-0.1-0.1-0.2-0.1-0.4-0.2c-0.3-0.2-0.6-0.3-1-0.3c-0.3,0-0.6,0.1-0.9,0.2c-0.2,0.1-0.3,0.1-0.5,0.2 C6.1,7.4,8.8,14.9,4.8,16.9H19.2z"/>
+</svg>
+
+
+
+    
+      <span class="a-u-hide-from-tablet">
+        Push
+      </span>
+      <span class="a-u-show-from-tablet">
+        Push-Nachrichten
+      </span>
+    
+</a>
+
+
+    
+    <a-color-scheme class="a-u-show-from-tablet a-cholor-scheme-tablet"></a-color-scheme>
+
+</div>
+
+
+    </div>
+
+  </a-collapse>
+
+</div>
+
+  
+                
+
+<footer class="footer">
+  <ul class="footer__list">
+
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Datenschutz
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="javascript:window._sp_.gdpr.loadPrivacyManagerModal(756676);"
+          class="footer__link"
+          data-google-interstitial=false
+          
+            id="js-gdpr-pm-link"
+          
+        >
+          Cookies &amp; Tracking
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="/impressum.html"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Impressum
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="/kontakt/"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Kontakt
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="https://www.heise.de/kontakt/?frage=3212474"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Barriere melden
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="https://mediadaten.heise.de/"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Mediadaten
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="/account/cancellation"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Verträge kündigen
+        </a>
+      </li>
+    
+  </ul>
+
+  <ul class="footer__list footer__list--additional">
+    <li class="footer__item">
+      <a href="http://www.interred.de/" target="_blank" class="footer__link">
+        Content Management by
+        <strong class="interred">
+  Inter<span class="interred__red">Red</span>
+</strong>
+
+      </a>
+    </li>
+
+    
+      
+      <li class="footer__item">
+        <a href="https://www.plusline.net/" class="footer__link" data-google-interstitial=false>
+          Hosted by Plus.line
+        </a>
+      </li>
+    
+      
+      <li class="footer__item">
+        <a href="https://www.heise-gruppe.de/artikel/Heise-Medien-3904998.html" class="footer__link" data-google-interstitial=false>
+          Copyright © 2024 Heise Medien
+        </a>
+      </li>
+    
+
+  </ul>
+</footer>
+
+
+                  
+
+<style type="text/css">
+  #consent-edit {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    height: 58px;
+    max-width: 58px;
+  }
+  #consent-edit:empty {
+    display: none;
+  }
+  .cmp-no-pur-privacy-wrapper {
+    display: flex;
+    margin: 0;
+    border-width: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #323232;
+  }
+  .cmp-no-pur-privacy-btn {
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 48px;
+    height: 48px;
+    background: transparent url(https://www.heise.de/icons/svg/icons/svg/pur-privacy-manager.svg) no-repeat center center !important;
+    text-indent: -9999rem;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    border-radius: 5px;
+  }
+</style>
+
+<div id="consent-edit"></div>
+
+<script>
+  var currentSite = window.location.href;
+  var noPurUrls = [
+    'https://spiele.heise.de',
+    'https://business-services.heise.de',
+    'https://www.heise.de/solutions',
+    'https://www.heise.de/brandworlds',
+    'https://www.heise.de/newsticker/sub/',
+    'https://www.heise.de/tarifrechner',
+    'https://preisvergleich.heise.de',
+  ]
+
+  var showNoPurConsentEditButton = noPurUrls.filter((url) => {
+    return currentSite.startsWith(url)
+  }).length > 0
+
+  if (showNoPurConsentEditButton) {
+    var noPurPrivacyManagerId = '869074';
+    var consentEditContainer = document.querySelector('#consent-edit');
+    var gdprFooterLink = document.querySelector('#js-gdpr-pm-link');
+    var noPurPmJs = `javascript:window._sp_.gdpr.loadPrivacyManagerModal(${noPurPrivacyManagerId});`
+
+    if (gdprFooterLink && gdprFooterLink.href) {
+      gdprFooterLink.href = noPurPmJs;
+    } else {
+      consentEditContainer.innerHTML = `
+        <div class="cmp-no-pur-privacy-wrapper">
+          <button
+            onclick="${noPurPmJs}"
+            class="cmp-no-pur-privacy-btn"
+          >
+            Privacy-Manager öffnen
+          </button>
+        </div>
+      `
+    }
+  }
+</script>
+
+
+          </div>
+        </div>
+        <div id="webperfinfos" hidden>
+          <p></p>
+          <button onclick="javascript:navigator.clipboard.writeText(document.querySelector('#webperfinfos p').innerText);">kopieren</button>
+        </div>
+      </div>
+
+    
+      
+    
+    <script>performance.mark('JS-Footer Anfang');</script>
+    
+  
+    <a-script
+      async
+      src="https://static-eu.cleverpush.com/channel/loader/2et4HQsqBnH6ZMRXr.js?v=2"
+      name="Cleverpush"
+      needs-consent
+    ></a-script>
+  
+
+    <script>
+      performance.mark('JS-Footer Ende');
+      performance.measure('JS-Footer', 'JS-Footer Anfang', 'JS-Footer Ende');
+    </script>
+    
+      <div style="display: inline;"><img id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/forum/heise-online/Kommentare/Einbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian/Zentralisierung-ist-sehr-praktisch/posting-44291722/show/?url=%2Fforum%2Fheise-online%2FKommentare%2FEinbrecher-loeschen-tausende-Geraete-beim-MDM-Anbieter-Mobile-Guardian%2FZentralisierung-ist-sehr-praktisch%2Fposting-44291722%2Fshow%2F" width="1" height="1" alt="" /></div>
+
+
+    
+
+    <!--JSON-D treenode: 2081 -->
+    <script>
+      performance.mark('BODY Ende');
+      performance.measure('BODY', 'BODY Anfang', 'BODY Ende');
+    </script>
+  </body>
+</html>
+<!-- Created with InterRed V23.2.15, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 3123, iBID: 3013354, CID: 3753660, iCID: 4978956 -->
+<!-- Link: $(LB3123:Linktext)$ $(LC3753660:Linktext)$ -->
+<!-- Generiert: 2024-06-24 15:13:33 -->
+
